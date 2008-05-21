@@ -22,7 +22,7 @@ WWW_DIST=\
 
 EXTRA_DIST=README Makefile config.mk
 
-DISTFILES=$(APP_DIST) $(EXTRA_DIST) 
+DISTFILES=$(WWW_DIST) $(EXTRA_DIST) 
 
 TAR=tar
 
@@ -47,7 +47,11 @@ install:
 $(tarball):	$(DISTFILES)
 	rm -rf $(P)
 	mkdir -p $(P)
-	cp $(DISTFILES) $(P)
+	for i in $(DISTFILES); do\
+		dest=`dirname "$(P)/$$i"`;\
+		mkdir -p "$$dest";\
+		cp "$$i" "$$dest";\
+	done
 	$(TAR) -jcf $@ $(P)
 	rm -rf $(P)
 
