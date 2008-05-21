@@ -2,7 +2,7 @@ APP_NAME=skins
 PACKAGE=acf-$(APP_NAME)
 VERSION=0.1.0
 
-APP_DIST=\
+WWW_DIST=\
 	static/alpine.jpg\
 	static/alpine_inv.jpg\
 	static/reset.css\
