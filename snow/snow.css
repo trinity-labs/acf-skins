@@ -30,7 +30,7 @@ a:hover	{
 
 
 body 	{
-	background:	url("/static/alpine.jpg") no-repeat;
+	background:	url("../static/alpine.jpg") no-repeat;
 	background-position:	top center;
 	font-family:	Arial, "Trebuchet MS",Geneva, Helvetica,  sans-serif;
 	font-size:	90%;
