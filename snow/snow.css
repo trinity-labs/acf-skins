@@ -139,8 +139,10 @@ body 	{
 	background:	transparent;
 	}
 
+/*
 #nav li:hover ul ul {
 	}
+*/
 
 #nav a {
 	}	
@@ -152,7 +154,9 @@ body 	{
 
 /*--------------------------------------------------------------------------------*/
 #main 	{ 
-	background: 	url("ul.png") no-repeat -20px -20px;
+	background: 	url("ul.png") repeat-x -20px -20px;
+	clear:		both;
+	
 	padding:	1px;
 	}
 
@@ -164,24 +168,44 @@ body 	{
 
 /*--------------------------------------------------------------------------------*/
 #subnav {
-	width:	60%;	
+	width:	75%;	
 	float:	left;
-	margin-top:	2em;
+	margin-top:	1.5em;
 	padding:	0;
+	border-bottom:	1px #ccc solid;
 	}
 
 #subnav a {
-	padding:	1em;
+	background:	url("nav-ur.png") top right no-repeat;
+	padding:	.25em 1em .25em 0;
+	}
+
+#subnav a:hover {
+	color:		#444;
 	}
 
 #subnav a.selected {
-	background: 	url("down.png") bottom center no-repeat;
+	background:	url("ur.png") right top no-repeat;
+	color:		#ffc;
+	text-decoration:	none;
 	}
 
 #subnav .tailer {
 	display:	block;
 	height:		1px;
 	width:		1px;
+	}
+
+#subnav li {
+	display: 	inline;
+	float:		left;
+	background:	url("nav-ul.png") top left no-repeat;
+	padding:	.25em 0 .25em 1em;
+	margin:		0 0em -2px .5em;
+	}
+
+#subnav li.selected {
+	background:	url("ul.png") left top no-repeat;
 	}
 
 /*--------------------------------------------------------------------------------*/
@@ -192,8 +216,8 @@ body 	{
 	padding:	2em;
 	margin:		0;
 	width:		70%;
-	border-top:	1px solid #ccc;
-	
+	/* border-top:	1px solid #ccc;
+	*/	
 	}
 	
 #content p {
@@ -268,21 +292,25 @@ body 	{
 
 /*---------------------------------------------------------------------------*/
 
-input, select, textarea {
+input, password, select, textarea {
 	font-family:	Georgia, Arial, Geneva, Helvetica,  sans-serif;
 	decoration:	none;
 	color:		#226;
 	padding:	2px;
 	background:	transparent;
+	border:		none;
 	}
 
-input.text, select {
+input.text, input.password {
 	border:	none;
 	border-bottom:		1px dotted #226;
 	}
 
-input.textarea {
+
+textarea {
 	border:		1px dotted #226;
+	font-family:	Courier-New, Courier, fixed;
+	font-size:	95%;
 	}
 
 input.submit {
@@ -290,7 +318,15 @@ input.submit {
 	color:		#446;
 	}
 
-input:hover, input:focus {
-	background:	#57b;
-	color:		#fff;
+select:focus, input:focus, textarea:focus {
+	background:	#444;
+	color:		#ffc;
+	}
+	
+	
+pre {
+	display: 	block;
+	font-size:	90%;
+	clear:		both;
+	font-family:	Courier-New, Courier, sans-serif;
 	}
