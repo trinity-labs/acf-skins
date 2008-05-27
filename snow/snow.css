@@ -1,6 +1,5 @@
 /* "Snow" - a css for Alpine Configuration Framework - 
- * N. Angelacos 2007 - GPL2 */
-
+ * N. Angelacos 2008 - GPL2 */
 
 /* 
  * -----------------------------------------------------------------------
@@ -30,23 +29,19 @@ a:hover	{
 
 
 body 	{
-	background:	url("../static/alpine.jpg") no-repeat;
-	background-position:	top center;
-	font-family:	Arial, "Trebuchet MS",Geneva, Helvetica,  sans-serif;
-	font-size:	90%;
+	font-family:	Georgia, Arial, Geneva, Helvetica,  sans-serif;
+	font-size:	100%;
 	width:		100%;
 	}
 
 
 .leader {
 	float:		left;
-	height:		0;
 	clear:		both;
 	}
 
 .tailer {
 	float:		left;
-	height:		0;
 	clear:		both;
 	}
 /*--------------------------------------------------------------------------------*/
@@ -57,6 +52,9 @@ body 	{
 /*--------------------------------------------------------------------------------*/
 #header {
 	width:		100%;
+	background:	url("alpine.jpg") #fff no-repeat 50%;
+	height:		100px;
+	font-family:	Arial, sans-serif;
 	}
 
 
@@ -65,7 +63,7 @@ body 	{
 	float:		right;
 	font-size:      80%;
 	margin:		8px 32px 0 0;
-	font-weight:	bold;
+	font-weight:	normal;
 	}
 
 #header .leader {
@@ -81,252 +79,178 @@ body 	{
 /*--------------------------------------------------------------------------------*/
 
 #logo {
-	float:		left;
-	width:		30%;
-	display:	inline;
-	margin:		.25em;
-	background:	url("logo-190x64.png") no-repeat;
+ 	display:	none;
 	}
 
 #logo .leader {
-	display:	none;
-	height:		0;
 	}
 
 #logo .tailer {
-	display:	none;
-	height:		0;
 	}
 
 #logo h1 {
-	font-size:	200%;
-	display:	none;
 	}
 
 #logo p {
-	/* position:	absolute; */
-	display:	block;
-	clear:		both;
-	width:		100%;
-	left:		.25em;
-	font-size:	100%;
-	padding-top:	70px;
 	}
 
-
-/*--------------------------------------------------------------------------------*/
-/* The .nav class is taken from suckerfish css dropdowns 
-   see http: http://www.alistapart.com/articles/dropdowns */
+/* The Nav bar */ 
 
 #nav {
-	float:			right;
-	display:		inline;
-	background:		url("g-bottom.png") repeat-x bottom;
-	width:			100%;
-	line-height:		1;
-	border-top:		1px solid #ccc;
+	float: left;
+	width:   20%;
+	margin-top:	2em;
+	
+	/* font-family:	Arial, sans-serif; */
 	}	
 
 #nav ul {
-        margin-right:		10em;
-	list-style: 		none;
-	float:			left;
+	padding:	0 0 1em 1em;
+	margin:		1em 0 1em 0;
 	}
 
 #nav li { /* all list items */
-        float: 			left;
-	padding: 		0em 2em 2px 2em;
-	color:                  #072966;
-	font-size:		125%;
-	font-weight:		bold;
-	color:			#248;
+	background: 	url("nav-ul.png") #eee  no-repeat;
+	margin:		0em 0 01em 0em;
+	padding:	25px 0 0 1em;
 	}
 
 #nav  li ul { /* second-level lists - hidden */
-	position: 		absolute; 
-        font-size:		65%;
-        width: 			15em;
-	left:			-999em;
+	background: 	url("nav-ll.png") #eee  no-repeat left bottom;
+	padding:	0 0 25px 1em;
+	margin:    	0 0 0 -1em;	
+	}
+
+#nav .selected {
+	background: #fff;
+	color: #888;
 	}
 
 #nav li ul ul { /* third-and-above-level lists */
-       margin: 			-1em 0 0 20em;
 		}
 
 #nav li ul li {
-	border: 		none;
-	background:		transparent;
-	padding:		0;
-	color:			#248;
+	margin:		0;
+	padding:	0;
+	line-height:    1.5;
+	border:		none;
+	font-size:	85%;
+	padding-left:	1em;
+	background:	transparent;
 	}
 
 #nav li:hover ul ul {
-        left: -999em; 
-	}
-
-#nav li:hover ul  { /* lists nested under hovered list items */
-        left: 		auto;
-        font-size:	65%;
-	background: 	url("orange.png");
-	border-left: 	1px solid #777;
-	border-top: 	1px solid #777;
-	border-bottom: 	1px solid #777;
-	/* next line is for IE only */
-	//  margin-top:	1.25em;
 	}
 
 #nav a {
-	display:	block;
-	padding: 	2px;
-	font-size:	75%; 
-	width: 		15em; 
 	}	
 
-
-/* End suckerfish */
+#nav .selected a {
+	color: #442;
+	text-decoration: none;
+	}
 
 /*--------------------------------------------------------------------------------*/
 #main 	{ 
-	clear:		both;
-	position:	relative;
-	display:	block;
-	margin:		0;
-	border:		0;
-	width:		100%;
+	background: 	url("ul.png") no-repeat -20px -20px;
+	padding:	1px;
 	}
 
 /*--------------------------------------------------------------------------------*/
 #postnav {
-	display:	block;
-	clear:		both;
-	font-size:	75%;
-	color:		#248;
-	border-top:	1px solid #fff;
-	margin:		0 0;
+	display:	none;
 	}
-
-#postnav h2 {
-	font-size:	200%;
-	margin:		1.5em 10%;
-	}
-
-#postnav .tailer {
-	clear:		both;
-	display:	block;
-	}
-
 
 
 /*--------------------------------------------------------------------------------*/
 #subnav {
-	padding:		0 10%;
-	font-weight: 	bold;
+	width:	60%;	
+	float:	left;
+	margin-top:	2em;
+	padding:	0;
 	}
 
 #subnav a {
-	/* display: 		inline; */
-	padding: 		.25em .25em 0 .25em;
-	border: 		1px solid #ccc;
-	color:			#fff;
-	border-bottom:		none;
-	background:		#ccc;
-	text-decoration:	none;
+	padding:	1em;
 	}
 
-#subnav a:hover {
-	color: 			#fff;
-	background-color:	#248;
+#subnav a.selected {
+	background: 	url("down.png") bottom center no-repeat;
 	}
 
-#subnav .selected {
-	background: 	#fff;
-	color:		#248;
+#subnav .tailer {
+	display:	block;
+	height:		1px;
+	width:		1px;
 	}
 
 /*--------------------------------------------------------------------------------*/
 
 #content {
-	border: 	1px solid #ccc;
-	font-size:	85%;
-	line-height:	1.5;
-	width:		80%;
-	margin-left:	10%;
-	padding:	2em 2em;
+	float:		left;
+	line-height:	2;
+	padding:	2em;
+	margin:		0;
+	width:		70%;
+	border-top:	1px solid #ccc;
+	
 	}
 	
 #content p {
 	clear:		both;
-	display:	block;
+	padding:	1em 1em 1em 1em;
 	}
 
 
 #content h1 {
-	display:	block;
-	font-size:	200%;
-	background:	url("g-top.png") repeat-x top;
-	border-bottom:  1px dotted #248;
-	font-weight:	bold;
-	color:		#248;
-	padding:	0 1em;
-	margin-bottom:	.5em;
+	font-size:	150%;
+	width:		100%;
+	clear:		both;
+	color:		#446;
+	text-align:	right;
+	border-top:	1px solid #aa9;
+	border-bottom:	1px solid #aa9;
 	}
 
 
 #content h2 {
-	font-size:	150%;
-	font-weight:	bold;
-	display:	block;
+	background: 	url("ul.png") no-repeat #666;
+	font-size:	120%;
+	color:		#ffc;
+	float:		left;
+	width:		98%;
+	padding-left:	2%;
+	margin-top:	1em; 
 	clear:		both;
-	padding:	0 1em;
-	margin-bottom:	.5em;
-	border-top:	1px dotted #ccc;
-	background:	url("g-bottom.png") repeat-x bottom;
 	}
 
+
 #content h3 {
-	font-size:	125%;
-	font-weight:	bold;
-	width:		100%;
-	display:	block;
 	clear:		both;
-	padding:	0 2px;
-	line-height:	1;
-	margin-bottom:	.25em;
-	border-bottom:	1px dotted #248;
-	border-top:	1px dotted #248;
 	}
 
 #content dl {
-	display:		block;
-	width:			100%;
-	clear:			both;
-	color:			#00f;
-	border:			1px solid green;
-	height:			1px;
+	margin:		0;
+	padding:	1em 0 25px 0;
+	width:		100%;
+	float:		left;
+	background:	url("lr.png") #eee no-repeat right bottom;
+	font-size: 80%;
 	}
-
+	
 
 #content dt {
+	padding-left: 	1em;
 	margin-top:	1em;
-	margin-right:	2em; 
 	float:		left;
-	clear:		left;
-	width:		30%;
-	border-top:	1px dashed #ccc;
-	border-right:	1px dashed #ccc;
-	display:	inline;
-	border:		1px solid red;
+	width:		25%;
+	clear:		both;
 	} 
 
 
 #content dd {
-	padding-top:	1em;
-	margin-bottom:	1em;
-	background:	#ccc;
-	display:	block;
-	float:		left;
-	border:		1px solid blue;
-	clear:		right;
+	float: left;
+	margin-top:	1em;
 	}
 
 
@@ -342,3 +266,31 @@ body 	{
 	color: 		#aaa;
 }
 
+/*---------------------------------------------------------------------------*/
+
+input, select, textarea {
+	font-family:	Georgia, Arial, Geneva, Helvetica,  sans-serif;
+	decoration:	none;
+	color:		#226;
+	padding:	2px;
+	background:	transparent;
+	}
+
+input.text, select {
+	border:	none;
+	border-bottom:		1px dotted #226;
+	}
+
+input.textarea {
+	border:		1px dotted #226;
+	}
+
+input.submit {
+	border:		2px outset #226;
+	color:		#446;
+	}
+
+input:hover, input:focus {
+	background:	#57b;
+	color:		#fff;
+	}
