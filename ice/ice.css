@@ -245,24 +245,31 @@ body {
  */
 #subnav {
 	position:			absolute;
-	top:			55px;
-	height:			40px;
+	top:			56px;
+	height:			20px;
 	left:			200px;
-	padding-top: 		2px;
+	padding-top: 		0px;
 }
 #subnav a {
 	height:			40px;
 	margin: 			0px 0px 5px 0px;
 	padding: 			3px 5px 2px 5px;
 	font-size:		12px;
-	background-image: 		url(menu_item.png);
 	border: 			1px solid #bbb;
 	border-bottom: 		none;
 }
 
-#subnav a.selected {
+#subnav li {
+	background-image: 		url(menu_item.png);
+	display: 			inline;
+	float:			left;
+	margin:			0em 0.1em 0.25em 0em;
+	padding:			0px;
+	}
+
+#subnav li.selected {
 	background:		#dff;
-}
+	}
 
 /*----------------------------------------------------------------------------------
  * PAGE > MAIN > CONTENT
