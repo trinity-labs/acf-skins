@@ -1,0 +1,229 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+<title>bsn2vpnc
+ - openntpd->config</title>
+<link rel="stylesheet" type="text/css" href="ice/reset.css">
+<link rel="stylesheet" type="text/css" href="alps.css">
+<!--[if IE]>
+<link rel="stylesheet" type="text/css" href="ice/ice-ie.css">
+<![endif]-->
+</head>
+<body>
+
+<div id="page">
+	<div id="header">
+		<div class="leader">
+			<a href="#Content" class="hide">[Skip to main content]</a>
+		</div>
+		<div id="logo">
+			<div class="leader"></div>
+			<h1>AlpineLinux</h1>
+			<p>bsn2vpnc
+</p>
+			<div class="tailer"></div>
+		</div>
+		<span class="mute">
+			<p>
+									<a href="https://bsn2vpnc/cgi-bin/acf/acf-util/logon/logout">Log out as 'alpine'</a>
+			 | 
+			<a href="/">home</a> | 
+			<a href="http://wiki.alpinelinux.org">about</a>
+			</p></span>
+		<div class="tailer"></div>
+	</div>	<!-- header -->
+
+	<div id="main">
+		<div class="leader">
+		</div>
+
+		<div id="nav">
+			<div class="leader">
+				<h3 class="hide">[Main menu]</h3>
+			</div>
+
+			<ul>
+				<li>Networking
+					<ul>
+						<li ><a href="/cgi-bin/acf/dhcp/dhcp/status">DHCP</a></li>
+						<li ><a href="/cgi-bin/acf/tinydns/tinydns/status">DNS</a></li>
+						<li ><a href="/cgi-bin/acf/dnscache/dnscache/status">DNScache</a></li>
+						<li ><a href="/cgi-bin/acf/chrony/chrony/status">NTP(chrony)</a></li>
+						<li class='selected'><a href="/cgi-bin/acf/openntpd/openntpd/status">NTP(openntpd)</a></li>
+						<li ><a href="/cgi-bin/acf/fetchmail/fetchmail/status">Fetchmail</a></li>
+						<li ><a href="/cgi-bin/acf/shorewall/shorewall/status">Firewall</a></li>
+						<li ><a href="/cgi-bin/acf/openvpn/openvpn/status">OpenVPN</a></li>
+						<li ><a href="/cgi-bin/acf/ipsec-tools/ipsectools/status">IPsec</a></li>
+						<li ><a href="/cgi-bin/acf/opennhrp/opennhrp/status">NHRP</a></li>
+						<li ><a href="/cgi-bin/acf/quagga/quagga/status">BGP</a></li>
+					</ul>
+				<li>Applications
+					<ul>
+						<li ><a href="/cgi-bin/acf/squid/squid/basic">Web Proxy</a></li>
+						<li ><a href="/cgi-bin/acf/dansguardian/dansguardian/advanced">Content Filter</a></li>
+						<li ><a href="/cgi-bin/acf/snort/snort/status">Snort</a></li>
+						<li ><a href="/cgi-bin/acf/gnats/gnats/status">GNATS bugreport</a></li>
+					</ul>
+				<li>System
+					<ul>
+						<li ><a href="/cgi-bin/acf/alpine-baselayout/interfaces/read">Interfaces</a></li>
+						<li ><a href="/cgi-bin/acf/alpine-baselayout/health/system">General health</a></li>
+						<li ><a href="/cgi-bin/acf/acf-util/password/status">User management</a></li>
+						<li ><a href="/cgi-bin/acf/apk/apk/loaded">Packages</a></li>
+						<li ><a href="/cgi-bin/acf/alpine-baselayout/syslog/status">System Logging</a></li>
+						<li ><a href="/cgi-bin/acf/alpine-baselayout/logfiles/status">Logfiles</a></li>
+						<li ><a href="/cgi-bin/acf/alpine-baselayout/skins/read">Skins</a></li>
+						<li ><a href="/cgi-bin/acf/alpine-conf/lbu/status">Local backups</a></li>
+					</ul>
+				<li>DevTools
+					<ul>
+						<li ><a href="/cgi-bin/acf/devtools/acfupdate/read">SVN status (for ACF)</a></li>
+					</ul>
+				</li>
+			</ul>
+
+			<div class="tailer">
+			</div>
+		</div>	<!-- nav -->
+
+
+		<div id="postnav">
+			<div class="leader">
+			</div>
+			<h2>openntpd : config</h2>
+			<!-- FIXME: Next row is 'dead' data! Remove 'class=hide' when done! -->
+			<p class='hide'>[ welcome ] > [ login ] > [ bgp ] > [ firewall ] > [ content filter ] > [ interfaces ]</p>
+			<div class="tailer">
+			</div>
+		</div>	<!-- postnav -->
+
+		<a name="Content"></a>
+
+		<div id="subnav">
+			<div class="leader">
+				<h3 class="hide">[Submenu]</h3>
+			</div>
+
+						<a  href="status">Status</a>
+			<a class='selected' href="config">Config</a>
+			<a  href="expert">Expert</a>
+			<a  href="logfile">Logfile</a>
+
+			<div class="tailer">
+			</div>
+		</div> <!-- subnav -->
+
+<div id="content">
+	<div class="leader">
+	</div>
+
+	
+<H1>SYSTEM INFO</H1>
+<DL>
+
+	<DT>Program status</DT>
+		<DD>Enabled
+		</DD>
+
+	<DT>Program version</DT>
+		<DD>openntpd-3.9_p1-r1
+		</DD>
+
+	<DT>Autostart sequence</DT>
+		<DD>Process will autostart at next boot (at sequence '28')
+		</DD>
+</DL>
+
+<form name="cmd" action="" method="POST">
+<h1>CONFIGURATION</h1>
+<H2>Advanced config</H2>
+<H3>General settings</H3>
+<DL>
+
+	<DT>Sets time directly at startup</DT>
+		<DD><input class="checkbox" type="checkbox"  name="setstimeonstartup"  value="No" >
+		</DD>
+
+	<DT>Save the above settings</DT>
+		<DD><input class="submit" type="submit"  name="cmdsavesetstimeonstartup"  value="Save" >
+		<P CLASS='descr'>See above checkbox</P>
+		</DD>
+</DL>
+
+
+<h3>'SET TIME' OPTIONS</h3>
+<DL>
+
+	<DT>Timeserver hosts</DT>
+		<DD><select name="hosts_list"  size="2" ><option  value="pool.ntp.org (pool)" >pool.ntp.org (pool)</option></select>
+		<P CLASS='descr'>In most cases you could use <i><b>pool.ntp.org</b></i> or <i><b>[countryname].pool.ntp.org</i></b> (if listed in <i><b>http://www.pool.ntp.org/</b></i>).</P>
+		</DD>
+
+	<DT>Delete selected host</DT>
+		<DD><input class="submit" type="submit"  name="hosts_cmd_delete"  value="Delete" >
+		<P CLASS='descr'>Mark a item in 'Timeserver hosts'-list before pressing [Delete].</P>
+		</DD>
+</DL>
+
+<DL>
+
+	<DT>Host to add</DT>
+		<DD><input class="text" type="text"  name="hosts_add"  value="" >
+		</DD>
+
+	<DT>Type of server</DT>
+		<DD><span style='display:inline' class=''>Server pool:<input style='margin-right:20px;margin-left:5px;' type='radio' class='' name='hosts_type' value='servers'>Single server:<input style='margin-right:20px;margin-left:5px;' type='radio' class='' name='hosts_type' value='server'></input></span>
+		</DD>
+
+	<DT>Add selected host</DT>
+		<DD><input class="submit" type="submit"  name="hosts_cmd_add"  value="Add" >
+		<P CLASS='descr'>Enter your values in 'Host to add' and chose 'Type of server' before pressing [Add].</P>
+		</DD>
+</DL>
+
+
+<h3>'PRESENT TIME' OPTIONS (ACT AS TIME SERVER)</h3>
+<DL>
+
+	<DT>Listen on address</DT>
+		<DD><select name="listen_list"  size="2" ></select>
+		<P CLASS='descr'>Empty list = Listening (acting as server) is disabled; '*' = Listen on all local addresses.</P>
+		</DD>
+
+	<DT>Delete selected host</DT>
+		<DD><input class="submit" type="submit"  name="listen_cmd_delete"  value="Delete"  disabled>
+		</DD>
+
+	<DT>New listen address</DT>
+		<DD><input class="text" type="text"  name="listen_add"  value="" >
+		</DD>
+
+	<DT>Add new listen address</DT>
+		<DD><input class="submit" type="submit"  name="listen_cmd_add"  value="Add" >
+		<P CLASS='descr'>Enter your values in 'New listen address' before pressing [Add].</P>
+		</DD>
+</DL>
+
+<H1>MANAGEMENT</H1>
+<DL><dt>Program control-panel</dt><dd><input class="submit" type="submit"  name="cmdmanagement"  value="Start"  disabled><input class="submit" type="submit"  name="cmdmanagement"  value="Stop" ><input class="submit" type="submit"  name="cmdmanagement"  value="Restart" ></dd><dt>Previous action result</dt><dd><pre> * Stopping ntpd: ok.
+ * Starting ntpd: ok.
+</pre></dd></DL></form>
+
+	<div class="tailer">
+	</div>
+</div>	<!-- content -->
+
+	</div> <!-- main -->
+
+	<div id="footer">
+		<div class="leader">
+		</div>
+		Made with care by webconf
+		<div class="tailer">
+		</div>
+	</div> <!-- footer -->
+</div> <!-- page -->
+
+</body>
+</html>

@@ -236,11 +236,11 @@ body {
 
 /*	border: 			2px solid blue; */
 }
-#subnav a {
+#xxsubnav a {
 /*	height:				20px; */
 /*	margin: 			0px 0px 5px 0px;
 	padding: 			3px 5px 2px 5px; */
-	float:	left;
+	float:		left;
 	padding:			5px;
 	margin-right:			10px;
 	margin-top:			0px;
@@ -252,23 +252,25 @@ body {
 	height:		100%;
 }
 
-#subnav a.selected {
-	border: 			2px solid #7799BB;
-	border-bottom: 			none;
-	font-weight:			bold;
-	background:			white;
-	text-decoration:		underline;
-}
 #subnav .tailer {
-	display:	none;
-	position:	absolute;
-	background:	blue;
-	top:		25px;
-	left:		0;
-	height:		30px;
-	width:		100%;
+	display:				none;
 }
+#subnav li {
+	font-size:			14px;
+	border: 				1px solid #7799BB;
+	border-bottom: 			none;
+	display: 				inline;
+	float:				left;
+	margin:				0em 0.5em 0em 0em;
+	padding:				5px;
+	background:			#ccc;
+	}
 
+#subnav li.selected {
+	background:			white;
+	text-decoration:			underline;
+	font-weight:			bold;
+	}
 /*----------------------------------------------------------------------------------
  * PAGE > MAIN > CONTENT
  *----------------------------------------------------------------------------------
