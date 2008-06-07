@@ -110,13 +110,13 @@ body 	{
 	}
 
 #nav li { /* all list items */
-	background: 	url("nav-ul.png") #eee  no-repeat;
+	background: 	url("navtop.png") #eee left top no-repeat;
 	margin:		0em 0 01em 0em;
 	padding:	25px 0 0 1em;
 	}
 
 #nav  li ul { /* second-level lists - hidden */
-	background: 	url("nav-ll.png") #eee  no-repeat left bottom;
+	background: 	url("navbottom.png") #eee  no-repeat left bottom;
 	padding:	0 0 25px 1em;
 	margin:    	0 0 0 -1em;	
 	}
@@ -172,23 +172,45 @@ body 	{
 	float:	left;
 	margin-top:	1.5em;
 	padding:	0;
-	border-bottom:	1px #ccc solid;
+	border-bottom:	1px #ccc solid; 
 	}
 
+#subnav ul {
+	display: inline;
+	}
+	
 #subnav a {
-	background:	url("nav-ur.png") top right no-repeat;
-	padding:	.25em 1em .25em 0;
+	background:	url("litetab.png") top right no-repeat #eee;
+	display:	block;
+	padding:	4px 14px 4px 0px; 
 	}
 
+#subnav li {                         
+        display:        inline;                              
+        float:          left; 
+        background:     url("litetab.png") top left no-repeat #eee;
+        margin-left:	14px;
+	padding:	0px 0px 0px 14px; 
+	margin-bottom:  -1px;
+       }
+       
+          
 #subnav a:hover {
-	color:		#444;
+	color:		#343434;
 	}
 
 #subnav a.selected {
-	background:	url("ur.png") right top no-repeat;
-	color:		#ffc;
+	background:		url("darktab.png") right top no-repeat #343434;
+	color:			#ffc;
 	text-decoration:	none;
 	}
+
+#subnav li.selected {
+	background:	url("darktab.png") left top no-repeat #343434;
+	padding-bottom:	2px;
+	margin-bottom:	-2px;
+	}
+
 
 #subnav .tailer {
 	display:	block;
@@ -196,17 +218,6 @@ body 	{
 	width:		1px;
 	}
 
-#subnav li {
-	display: 	inline;
-	float:		left;
-	background:	url("nav-ul.png") top left no-repeat;
-	padding:	.25em 0 .25em 1em;
-	margin:		0 0em -2px .5em;
-	}
-
-#subnav li.selected {
-	background:	url("ul.png") left top no-repeat;
-	}
 
 /*--------------------------------------------------------------------------------*/
 
@@ -225,7 +236,7 @@ body 	{
 	padding:	1em 1em 1em 1em;
 	}
 
-
+/*
 #content h1 {
 	font-size:	150%;
 	width:		100%;
@@ -236,8 +247,9 @@ body 	{
 	border-bottom:	1px solid #aa9;
 	}
 
+*/
 
-#content h2 {
+#content h1,h2 {
 	background: 	url("ul.png") no-repeat #666;
 	font-size:	120%;
 	color:		#ffc;
@@ -311,6 +323,10 @@ textarea {
 	border:		1px dotted #226;
 	font-family:	Courier-New, Courier, fixed;
 	font-size:	95%;
+	width:		100%;
+	margin:		2px;
+	height:		14em;
+	border:		none;
 	}
 
 input.submit {
@@ -325,8 +341,19 @@ select:focus, input:focus, textarea:focus {
 	
 	
 pre {
+	line-height:	100%;
 	display: 	block;
 	font-size:	90%;
 	clear:		both;
 	font-family:	Courier-New, Courier, sans-serif;
 	}
+	
+	
+table { 
+	display: 	block;
+	clear:		left;
+	background:	transparent;
+	
+	}
+	
+		
