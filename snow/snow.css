@@ -29,6 +29,7 @@ a:hover	{
 
 
 body 	{
+
 	font-family:	Georgia, Arial, Geneva, Helvetica,  sans-serif;
 	font-size:	100%;
 	width:		100%;
@@ -52,9 +53,9 @@ body 	{
 /*--------------------------------------------------------------------------------*/
 #header {
 	width:		100%;
-	background:	url("alpine.jpg") #fff no-repeat 50%;
 	height:		100px;
 	font-family:	Arial, sans-serif;
+	background:	url("snow1.jpg") #fff no-repeat bottom right;
 	}
 
 
@@ -63,7 +64,9 @@ body 	{
 	float:		right;
 	font-size:      80%;
 	margin:		8px 32px 0 0;
+	padding:	5px;
 	font-weight:	normal;
+	background:	#ddb;
 	}
 
 #header .leader {
@@ -154,10 +157,7 @@ body 	{
 
 /*--------------------------------------------------------------------------------*/
 #main 	{ 
-	background: 	url("ul.png") repeat-x -20px -20px;
-	clear:		both;
-	
-	padding:	1px;
+	width:		100%;
 	}
 
 /*--------------------------------------------------------------------------------*/
@@ -267,26 +267,30 @@ body 	{
 
 #content dl {
 	margin:		0;
-	padding:	1em 0 25px 0;
 	width:		100%;
-	float:		left;
 	background:	url("lr.png") #eee no-repeat right bottom;
-	font-size: 80%;
+	display:	block;
+	clear:		both;
+	font-size: 	80%;
+	padding-bottom:	15px; 
 	}
 	
 
 #content dt {
-	padding-left: 	1em;
-	margin-top:	1em;
 	float:		left;
+	clear:		left;
 	width:		25%;
-	clear:		both;
+	text-align:	left;
+	padding:	5px 0 0px 15px;
+	border-bottom:	1px solid transparent;
 	} 
 
 
 #content dd {
-	float: left;
-	margin-top:	1em;
+	margin-left:	25%;
+	clear:		right;
+	padding:	5px 0 0px 15px;
+	border-bottom:	1px solid transparent;
 	}
 
 
@@ -323,10 +327,9 @@ textarea {
 	border:		1px dotted #226;
 	font-family:	Courier-New, Courier, fixed;
 	font-size:	95%;
-	width:		100%;
+	width:		95%;
 	margin:		2px;
 	height:		14em;
-	border:		none;
 	}
 
 input.submit {
