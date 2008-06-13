@@ -17,6 +17,7 @@ WWW_DIST=\
 	static/tango/16x16/apps/system-users.png \
 	static/tango/16x16/actions/list*.png \
 	static/tango/16x16/actions/document-properties.png \
+	alps/* \
 	ice/* \
 	snow/* \
 	clouds/*
