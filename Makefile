@@ -15,8 +15,8 @@ WWW_DIST=\
 	static/tango/16x16/devices/computer.png \
 	static/tango/16x16/devices/network*.png \
 	static/tango/16x16/apps/system-users.png \
-	status/tango/16x16/apps/utilities*.png \
-	status/tango/16x16/emblems/emblem-unreadable.png \
+	static/tango/16x16/apps/utilities*.png \
+	static/tango/16x16/emblems/emblem-unreadable.png \
 	static/tango/16x16/actions/list*.png \
 	static/tango/16x16/actions/go*.png \
 	static/tango/16x16/actions/document-properties.png \
