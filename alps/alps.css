@@ -36,6 +36,10 @@ input {
 border:1px solid #ccc;
 }
 
+input.checkbox {
+border: none;
+}
+
 hr {
 background-color:white;
 height:3px;
@@ -221,6 +225,7 @@ white-space:nowrap;
 overflow:hidden;
 background:transparent;
 border-top:0px;
+margin-top: 10px;
 }
 
 #nav ul li ul {
@@ -246,6 +251,7 @@ border-bottom: 0;
 border-top:1px solid #c8dbee;
 border-left:0;
 background:transparent;
+//margin-bottom: -4px;
 }
 
 #nav ul li ul li.selected {
@@ -280,7 +286,8 @@ background-image:none;
  */
  
 #postnav h2 {
-clear: both;
+display: none;
+/* clear: both;
 padding:0px 0px 0px 0px;
 background:transparent; 
 color:black;
@@ -289,7 +296,7 @@ font-weight:normal;
 white-space:nowrap;
 overflow:hidden;
 border:none;
-margin-bottom:34px;
+margin-bottom:34px; */
 }
 
 #postnav p {
@@ -320,10 +327,15 @@ left:40px;
 padding-top:2px;
 }
 
+#subnav ul {
+//padding-top: 5px;
+}
+
 #subnav li {
 display:inline;
 height:40px;
 margin:0px 0px 5px 0px;
+//margin-right: 5px;
 padding:3px 5px 2px 5px;
 font-size:12px;
 color:#ffffff;
@@ -355,7 +367,7 @@ color: #003566;
 background-image:url();
 background-repeat:repeat-y;
 background-position:right;
-margin-top:-20px;
+margin-top:40px;
 padding-right:10px;
 border-left:0px solid #cacaca;
 }
@@ -498,7 +510,7 @@ white-space:nowrap;
 
 #footer {
 margin-top:		20px;
-margin-left: 		200px;
+margin-left: 		240px;
 margin-right: 		10px;
 padding:			5px;
 clear: both;
