@@ -1,6 +1,6 @@
 APP_NAME=skins
 PACKAGE=acf-$(APP_NAME)
-VERSION=0.1.4
+VERSION=0.1.5
 
 WWW_DIST=\
 	static/alpine.jpg\
