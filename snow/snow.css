@@ -359,4 +359,7 @@ table {
 	
 	}
 	
-		
+input.text[readonly], textarea[readonly] {
+	border:		none;
+	font-weight:	bold;
+	}

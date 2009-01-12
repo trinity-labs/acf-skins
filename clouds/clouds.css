@@ -36,6 +36,10 @@ input.error,select.error,textarea.error {
 	font-weight: 			normal;
 	font-style:			normal;
 }
+input.text[readonly],textarea[readonly] {
+	border:				none;
+	font-weight: 			bold;
+}
 
 .mute {
 	color: 				#777;
