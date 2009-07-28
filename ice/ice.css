@@ -369,6 +369,7 @@ color: 		#003566;
 #content dd {
 	margin-top:		-17px;
 	font-size: 		12px;
+	min-height:		12px;
 	margin-left: 		230px;
 	padding-bottom:		5px;
 }
