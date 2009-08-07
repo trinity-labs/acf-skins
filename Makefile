@@ -1,6 +1,6 @@
 APP_NAME=skins
 PACKAGE=acf-$(APP_NAME)
-VERSION=0.2.0
+VERSION=0.2.1
 
 WWW_DIST=\
 	static/alpine.jpg\
@@ -21,7 +21,8 @@ WWW_DIST=\
 	static/tango/16x16/actions/list*.png \
 	static/tango/16x16/actions/go*.png \
 	static/tango/16x16/actions/document-properties.png \
-	alps/* \
+	alps/*.jpg \
+	alps/*.css \
 	ice/* \
 	snow/* \
 	clouds/*
