@@ -33,6 +33,8 @@ body 	{
 	font-family:	Georgia, Arial, Geneva, Helvetica,  sans-serif;
 	font-size:	100%;
 	width:		100%;
+	margin:		0 0 0 0;
+	padding:	0 0 0 0;
 	}
 
 
@@ -107,24 +109,33 @@ body 	{
 	float: left;
 	width:   20%;
 	margin-top:	2em;
+	margin-right:	1em;
 	
 	/* font-family:	Arial, sans-serif; */
 	}	
 
 #nav ul {
-	padding:	0 0 1em 1em;
-	margin:		1em 0 1em 0;
+	padding:	0 0 0em 1em;
+	margin:		37px 0em 1em 0em;
+	}
+
+#nav ul li {
+	background: 	url("lite-top.png") no-repeat #666;
+	margin-top:	0px;
+	padding-top:	0.3em;
+	color:		black;
+	font-weight:	bold;
 	}
 
 #nav li { /* all list items */
 	background: 	url("navtop.png") #eee left top no-repeat;
-	margin:		0em 0 01em 0em;
+	margin:		0em 0 1em 0em;
 	padding:	25px 0 0 1em;
 	}
 
 #nav  li ul { /* second-level lists - hidden */
 	background: 	url("navbottom.png") #eee  no-repeat left bottom;
-	padding:	0 0 25px 1em;
+	padding:	0 0 10px 1em;
 	margin:    	0 0 0 -1em;	
 	}
 
@@ -144,6 +155,7 @@ body 	{
 	font-size:	85%;
 	padding-left:	1em;
 	background:	transparent;
+	font-weight:	normal;
 	}
 
 /*
@@ -228,7 +240,7 @@ body 	{
 #content {
 	float:		left;
 	line-height:	2;
-	padding:	2em;
+	padding:	0em;
 	margin:		0;
 	width:		70%;
 	/* border-top:	1px solid #ccc;
@@ -253,7 +265,7 @@ body 	{
 
 */
 
-#content h1,h2 {
+#content h1,h2,h3 {
 	background: 	url("ul.png") no-repeat #666;
 	font-size:	120%;
 	color:		#ffc;
@@ -264,9 +276,19 @@ body 	{
 	clear:		both;
 	}
 
+#content h2,h3 {
+	background: 	url("lite-top.png") no-repeat #666;
+	color:		black;
+	font-weight:	bold;
+	height:		26px;
+	font-size:	90%;
+	}
 
 #content h3 {
-	clear:		both;
+	padding-left:	3%;
+	width:		97%;
+	height:		24px;
+	font-size:	80%;
 	}
 
 #content dl {
@@ -278,8 +300,8 @@ body 	{
 	font-size: 	80%;
 	padding-bottom:	15px; 
 	}
-	
 
+	
 #content dt {
 	float:		left;
 	clear:		left;
@@ -297,11 +319,14 @@ body 	{
 	border-bottom:	1px solid transparent;
 	}
 
+#content p,input.text,select,textarea,input.password {
+	width:		97%;
+	}
 
 #footer {
 	clear: 		both;
 	border-top:	1px solid #d6d6d6;
-	position:		relative;
+	position:	relative;
 	padding-top:	5px;
 	margin-top:	15px;
 	margin-bottom:	10px;
@@ -357,13 +382,24 @@ pre {
 	
 	
 table { 
-	display: 	block;
 	clear:		left;
-	background:	transparent;
-	
+	width:		100%;
 	}
 	
+table td {
+	white-space:	nowrap;
+	padding-right:	20px;
+	}
+
 input.text[readonly], textarea[readonly] {
 	border:		none;
 	font-weight:	bold;
 	}
+
+.header {
+	background:	#ccc;
+	border-bottom:	3px double #999;
+	font-weight:	bold;
+	vertical-align:	bottom;
+	}
+
