@@ -45,6 +45,10 @@ body 	{
 	float:		left;
 	clear:		both;
 	}
+.error 	{
+	color:		#B00;
+	}
+
 /*--------------------------------------------------------------------------------*/
 #page 	{ 
 	position:	relative;
