@@ -243,27 +243,12 @@ body 	{
 	padding:	0em;
 	margin:		0;
 	width:		70%;
-	/* border-top:	1px solid #ccc;
-	*/	
 	}
 	
 #content p {
 	clear:		both;
-	padding:	1em 1em 1em 1em;
+	padding:	0em 1em 0.2em 2em;
 	}
-
-/*
-#content h1 {
-	font-size:	150%;
-	width:		100%;
-	clear:		both;
-	color:		#446;
-	text-align:	right;
-	border-top:	1px solid #aa9;
-	border-bottom:	1px solid #aa9;
-	}
-
-*/
 
 #content h1,h2,h3 {
 	background: 	url("ul.png") no-repeat #666;
@@ -307,16 +292,16 @@ body 	{
 	clear:		left;
 	width:		25%;
 	text-align:	left;
-	padding:	5px 0 0px 15px;
-	border-bottom:	1px solid transparent;
+	padding-top:	15px;
+	margin-left:	10px;
 	} 
 
 
 #content dd {
-	margin-left:	25%;
+	padding-top:	15px;
+	margin-left:	26%;
 	clear:		right;
-	padding:	5px 0 0px 15px;
-	border-bottom:	1px solid transparent;
+	border-bottom:	none;
 	}
 
 #content p,input.text,select,textarea,input.password {
@@ -348,7 +333,7 @@ input, password, select, textarea {
 
 input.text, input.password {
 	border:	none;
-	border-bottom:		1px dotted #226;
+	border-bottom:		1px dashed #226;
 	}
 
 
