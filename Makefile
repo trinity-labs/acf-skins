@@ -5,9 +5,11 @@ VERSION=0.2.4
 WWW_DIST=\
 	static/alpine.jpg\
 	static/alpine_inv.jpg\
+	static/asc.gif\
+	static/bg.gif\
+	static/desc.gif\
 	static/reset.css\
 	static/watermark.jpg\
-	static/prototype.js\
 	static/tango/16x16/categories/applications-internet.png \
 	static/tango/16x16/categories/applications-system.png \
 	static/tango/16x16/places/start-here.png \
