@@ -329,7 +329,9 @@ body {
 	margin-right:		10px;
 	display:		inline;
 }
-
+#content input[disabled] {
+	color:			#909090;
+}
 #content textarea {
 	height:			300px;
 }

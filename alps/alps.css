@@ -492,7 +492,9 @@ width:200px;
 margin-right:10px;
 display:inline;
 }
-
+#content input[disabled] {
+        color:#707070;
+}
 #content textarea {
 height:300px;
 }
