@@ -27,7 +27,8 @@ WWW_DIST=\
 	alps/*.css \
 	ice/* \
 	snow/* \
-	clouds/*
+	clouds/* \
+	wik/*
 
 
 EXTRA_DIST=README Makefile config.mk
