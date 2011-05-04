@@ -28,7 +28,8 @@ WWW_DIST=\
 	ice/* \
 	snow/* \
 	clouds/* \
-	wik/*
+	wik/* \
+	wik/images/*
 
 
 EXTRA_DIST=README Makefile config.mk
