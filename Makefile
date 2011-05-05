@@ -28,7 +28,7 @@ WWW_DIST=\
 	ice/* \
 	snow/* \
 	clouds/* \
-	wik/* \
+	wik/wik.css \
 	wik/images/*
 
 
