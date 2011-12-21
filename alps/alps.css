@@ -34,14 +34,10 @@ hr {
 
 .error {
 	font-weight:bold;
-	font-style:italic;
-	color:#FFF;
+	color:#FF3333;
 	
-	background: #FF3333;
-	border-top: 1px solid #FF3333;
-	border-bottom: 1px solid #FF3333;
 	margin-bottom: 1em;
-	padding: 0.3em 0.6em 0.3em 1.3em;
+	padding: 0.6em;
 }
 
 input.error,
@@ -228,7 +224,7 @@ body {
  */
 
 #subnav {
-	margin: 1em 0 -3em 0;
+	margin: 1em 0 0 0;
 	float: right;
 	width: 80%;
 }
@@ -281,7 +277,7 @@ body {
 }
 
 #content h1 { 
-	margin: 3em 0 1em 0;
+	margin: 0.8em 0 1em 0;
 	padding: 0.4em 0.3em 0.3em 1em;
 	background-color: #6CB7F8;
 	border: 1px solid #3F83CE; 
@@ -326,17 +322,15 @@ body {
 	text-align:right;
 	font-weight:bold;
 	float:left;
-	clear:left;
-	margin-top:6px;
-	padding-left:5px 0 5px 5px;
+
+	padding-top: 10px;
 }
 
 #content dd {
-	margin-top:10px;
-	clear:right;
 	font-size:12px;
+
+	padding-top: 10px;
 	margin-left:230px;
-	padding-top:5px 0;
 }
 
 #content .tailer {
