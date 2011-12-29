@@ -121,7 +121,11 @@ body {
 }
 
 #logo p {
-	display: none;
+	color:#000;
+	position:absolute;
+	top:55px;
+	left:34px;
+	font-size:12px;
 }
 
 /*----------------------------------------------------------------------------------
