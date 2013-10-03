@@ -5,9 +5,6 @@ VERSION=0.4.2
 WWW_DIST=\
 	static/alpine.jpg\
 	static/alpine_inv.jpg\
-	static/asc.gif\
-	static/bg.gif\
-	static/desc.gif\
 	static/reset.css\
 	static/watermark.jpg\
 	static/tango/16x16/categories/applications-internet.png \
@@ -29,6 +26,7 @@ WWW_DIST=\
 	snow/* \
 	clouds/* \
 	wik/wik.css \
+	wik/wik.js \
 	wik/images/*
 
 
