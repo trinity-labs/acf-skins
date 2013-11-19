@@ -20,14 +20,13 @@ WWW_DIST=\
 	static/tango/16x16/actions/list*.png \
 	static/tango/16x16/actions/go*.png \
 	static/tango/16x16/actions/document-properties.png \
-	alps/*.jpg \
-	alps/*.css \
+	alps/* \
 	ice/* \
 	snow/* \
 	clouds/* \
 	wik/wik.css \
 	wik/wik.js \
-	wik/images/*
+	wik/images/* \
 
 
 EXTRA_DIST=README Makefile config.mk
