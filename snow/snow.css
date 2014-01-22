@@ -239,7 +239,8 @@ body 	{
 	font-size:	80%;
 	}
 
-#content dl {
+#content dl,
+#content .item {
 	margin:		0;
 	width:		100%;
 	background:	url("lr.png") #eee no-repeat right bottom;
@@ -250,7 +251,8 @@ body 	{
 	}
 
 	
-#content dt {
+#content dt,
+#content .item .left {
 	float:		left;
 	clear:		left;
 	width:		25%;
@@ -262,7 +264,8 @@ body 	{
 	} 
 
 
-#content dd {
+#content dd,
+#content .item .right {
 	padding-top:	15px;
 	margin-left:	26%;
 	clear:		right;

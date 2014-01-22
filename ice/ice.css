@@ -315,7 +315,8 @@ border-bottom:		3px solid #cacaca;
 	display: inline;
 	padding-left: 200px;
 }
-#content dl {
+#content dl,
+#content .item {
 	margin:			0px;
 	padding:			0px;
 	margin-bottom:		10px;
@@ -324,7 +325,8 @@ border-bottom:		3px solid #cacaca;
 	display:			block;
 	clear:			right;
 }
-#content dt {
+#content dt,
+#content .item .left {
 	width: 			220px;
 	font-size: 		12px;
 	text-align:		left;
@@ -336,7 +338,8 @@ border-bottom:		3px solid #cacaca;
 	padding-bottom:		5px;
 	border-top:		1px solid #ddd;
 }
-#content dd {
+#content dd,
+#content .item .right{
 	margin-top:		-17px;
 	font-size: 		12px;
 	margin-left: 		230px;

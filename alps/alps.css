@@ -293,12 +293,14 @@ border-bottom:3px solid #cacaca;
 	padding-left: 200px;
 }
 
-#content dl {
+#content dl,
+#content .item {
 	display:block;
 	clear:both;
 }
 
-#content dt {
+#content dt,
+#content .item .left {
 	width:220px;
 	font-size:12px;
 	text-align:right;
@@ -308,7 +310,8 @@ border-bottom:3px solid #cacaca;
 	padding-top: 10px;
 }
 
-#content dd {
+#content dd,
+#content .item .right {
 	font-size:12px;
 
 	padding-top: 10px;

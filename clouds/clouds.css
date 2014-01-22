@@ -324,7 +324,8 @@ body {
 	padding-left: 200px;
 }
 */
-#content dl {
+#content dl,
+#content .item {
 	border:			1px dashed #ddd;
 	margin:			0px;
 	padding:			0px;
@@ -334,7 +335,8 @@ body {
 	display:			block;
 	clear:			right;
 }
-#content dt {
+#content dt,
+#content .item .left {
 	width: 			220px;
 	font-size: 		12px;
 	text-align:		left;
@@ -345,7 +347,8 @@ body {
 	padding-top:		5px;
 	padding-bottom:		5px;
 }
-#content dd {
+#content dd,
+#content .item .right {
 	margin-top:		-17px;
 	font-size: 		12px;
 	margin-left: 		230px;

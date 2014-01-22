@@ -286,7 +286,8 @@ body {
 	font-size: 17px;
 }
 
-#content dl {
+#content dl,
+#content .item {
 	margin:	0px;
 	padding: 0px;
 	margin-bottom: 10px;
@@ -296,7 +297,8 @@ body {
 	clear: right;
 }
 
-#content dt {
+#content dt,
+#content .item .left {
 	min-height: 8px;
 	width: 220px;
 	font-size: 12px;
@@ -309,7 +311,8 @@ body {
 	padding-bottom: 5px;
 }
 
-#content dd {
+#content dd,
+#content .item .right {
 	margin-top: -17px;
 	font-size: 12px;
 	margin-left: 230px;
