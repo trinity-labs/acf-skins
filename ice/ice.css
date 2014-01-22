@@ -133,17 +133,13 @@ body {
 	padding: 			0px 0px 0px 0px;
 }
 
-/*----------------------------------------------------------------------------------
- * PAGE > HEADER > LOGO
- *----------------------------------------------------------------------------------
- */
-#logo h1 {
+#header h1 {
 	position:			absolute;
 	top:			10px;
 	left: 			10px;
 	font-size:		40px;
 }
-#logo p {
+#header p.hostname {
 	position:			absolute;
 	top:			55px;
 	left:			10px;
@@ -224,39 +220,6 @@ body {
 }
 
 /*----------------------------------------------------------------------------------
- * PAGE > MAIN > POSTNAV
- *----------------------------------------------------------------------------------
- */
-#postnav h2 {
-	clear: both;
-	padding: 			2px 0px 2px 5px;
-	background:		#6688AA; 
-	color: 			white;
-	font-size: 		16px;
-	font-weight: 		bold;
-	white-space: 		nowrap;
-	overflow: 		hidden;
-	background-image: 		url(shadow-side.png);
-	background-repeat: 		repeat-y;
-	background-position: 	right;
-	border: 			none;
-	margin-right:		0px;
-}
-#postnav p {
-	position: 		absolute;
-	top:			80px;
-	left:			0px;
-	width:			100%;
-	color: 			#999;
-	font-size: 		11px;
-	font-weight:		verdana, arial;
-	font-weight: 		bold;
-	white-space: 		nowrap;
-	overflow: 		hidden;
-	background:		transparent;
-	padding: 			0px 5px 0px 10px;
-}
-/*----------------------------------------------------------------------------------
  * PAGE > MAIN > SUBNAV
  *----------------------------------------------------------------------------------
  */
@@ -314,6 +277,7 @@ color: 		#003566;
 	margin-top:		-20px;
 	padding-right:		10px;
 	border-left:		1px solid #cacaca;
+border-bottom:		3px solid #cacaca;
 }
 #content h1,h2,h3,h4,h5 { 
 	clear:			both;
@@ -378,11 +342,13 @@ color: 		#003566;
 	margin-left: 		230px;
 	padding-bottom:		5px;
 }
+/*
 #content .tailer {
 	clear: 			both;
 	border-bottom:		3px solid #cacaca;
 	margin-left: 		0px;
 }
+*/
 #content .submit {
 	width: 			100px;
 	border-right:		1px solid #cacaca;

@@ -47,9 +47,6 @@ input.text[readonly],textarea[readonly] {
 	font-weight: 			bold;
 }
 
-.mute {
-	color: 				#777;
-}
 pre {
 	font-family:			monospace;
 	font-size:			10pt;
@@ -111,7 +108,7 @@ body {
 	text-align:		right;
 	top:			25px;
 }
-#logo p {
+#header p.hostname {
 	text-align:		left;
 	color:			white;
 }
@@ -120,7 +117,7 @@ body {
  * PAGE > HEADER > LOGO
  *----------------------------------------------------------------------------------
  */
-#logo h1 {
+#header h1 {
 	position:				absolute;
 	text-align:			center;
 	left:				0px;
@@ -129,7 +126,7 @@ body {
 	width:				100%;
 	font-size:			40px; 
 }
-#logo p {
+#header p.hostname {
 /*	position:			absolute;
 	top:				55px; 
 	left:				10px;*/
@@ -222,16 +219,6 @@ body {
 	text-decoration:	underline;
 }
 /*----------------------------------------------------------------------------------
- * PAGE > MAIN > POSTNAV
- *----------------------------------------------------------------------------------
- */
-#postnav h2 {
-	display: none;
-}
-#postnav p {
-	display: none;
-}
-/*----------------------------------------------------------------------------------
  * PAGE > MAIN > SUBNAV
  *----------------------------------------------------------------------------------
  */
@@ -264,9 +251,6 @@ body {
 	height:		100%;
 }
 
-#subnav .tailer {
-	display:				none;
-}
 #subnav li {
 	font-size:			14px;
 	border: 				1px solid #7799BB;

@@ -43,16 +43,6 @@ body 	{
 	padding:	0 0 0 0;
 	}
 
-
-.leader {
-	float:		left;
-	clear:		both;
-	}
-
-.tailer {
-	float:		left;
-	clear:		both;
-	}
 .error 	{
 	color:		#B00;
 	}
@@ -70,8 +60,7 @@ body 	{
 	background:	url("snow1.jpg") #fff no-repeat bottom right;
 	}
 
-
-#header .mute {
+#header p.links {
 	display:	inline;
 	float:		right;
 	font-size:      80%;
@@ -81,32 +70,14 @@ body 	{
 	background:	#ddb;
 	}
 
-#header .leader {
-	display:	none;
-	}
-
-#header .tailer {
-	clear: 		both;
-	display:	none;
-	}
-
-
 /*--------------------------------------------------------------------------------*/
 
-#logo {
+#header h1 {
  	display:	none;
 	}
 
-#logo .leader {
-	}
-
-#logo .tailer {
-	}
-
-#logo h1 {
-	}
-
-#logo p {
+#header p.hostname {
+ 	display:	none;
 	}
 
 /* The Nav bar */ 
@@ -183,12 +154,6 @@ body 	{
 	}
 
 /*--------------------------------------------------------------------------------*/
-#postnav {
-	display:	none;
-	}
-
-
-/*--------------------------------------------------------------------------------*/
 #subnav {
 	width:	75%;	
 	float:	left;
@@ -232,14 +197,6 @@ body 	{
 	padding-bottom:	2px;
 	margin-bottom:	-2px;
 	}
-
-
-#subnav .tailer {
-	display:	block;
-	height:		1px;
-	width:		1px;
-	}
-
 
 /*--------------------------------------------------------------------------------*/
 

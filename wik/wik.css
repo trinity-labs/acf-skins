@@ -59,10 +59,6 @@ input.checkbox {
 	border: none;
 }
 
-.mute {
-	color: #777;
-}
-
 .header {
 	background: #eee;
 	border-bottom: 3px double #999;
@@ -126,12 +122,12 @@ body {
 /*----------------------------------------------------------------------------------
  * PAGE > HEADER > LOGO
  *--------------------------------------------------------------------------------*/
-#logo h1 {
+#header h1 {
 	display: none;
 }
 
 /* hostname */
-#logo p {
+#header p.hostname {
 	float: left;
 	margin:	1px 1px 1px 10px;
 }
@@ -211,14 +207,6 @@ body {
 
 #nav ul li ul li.selected a:hover {
 	background-image: none;
-}
-
-
-/*----------------------------------------------------------------------------------
- * PAGE > MAIN > POSTNAV
- *--------------------------------------------------------------------------------*/
-#postnav {
-	display: none;
 }
 
 /*----------------------------------------------------------------------------------
@@ -328,10 +316,12 @@ body {
 	padding-bottom: 5px;
 }
 
+/*
 #content .tailer {
 	clear: both;
 	margin-left: 0px;
 }
+*/
 
 #content .submit {
 	width: 100px;
