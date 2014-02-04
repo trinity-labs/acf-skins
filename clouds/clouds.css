@@ -85,7 +85,7 @@ body {
 #header {
 	width: 				100%;
 	height: 			75px;
-	background-image: 		url("../static/alpine_inv.jpg");
+	background-image: 		url("alpine_inv.jpg");
 	background-repeat: 		repeat-x;
 /*	background: 	#777;	*/
 	color:			white;

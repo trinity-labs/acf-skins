@@ -3,10 +3,7 @@ PACKAGE=acf-$(APP_NAME)
 VERSION=0.5.1
 
 WWW_DIST=\
-	static/alpine.jpg\
-	static/alpine_inv.jpg\
 	static/reset.css\
-	static/watermark.jpg\
 	static/tango/16x16/categories/applications-internet.png \
 	static/tango/16x16/categories/applications-system.png \
 	static/tango/16x16/places/start-here.png \
