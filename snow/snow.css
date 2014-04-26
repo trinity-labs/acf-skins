@@ -275,6 +275,10 @@ body 	{
 	border-bottom:	none;
 	}
 
+#content table form {
+	display:	inline-block;
+}
+
 #content .item p,input.text,select,textarea,input.password {
 	background:	#eee;
 	width:		97%;

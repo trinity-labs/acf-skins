@@ -354,6 +354,9 @@ body {
 	margin-left: 		230px;
 	padding-bottom:		5px;
 }
+#content table form {
+	display:		inline-block;
+}
 #content .submit {
 	width: 			100px;
 	border-right:		1px solid #cacaca;

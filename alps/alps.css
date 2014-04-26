@@ -317,6 +317,11 @@ border-bottom:3px solid #cacaca;
 	padding-top: 10px;
 	margin-left:230px;
 }
+
+#content table form {
+	display: inline-block;
+}
+
 /*
 #content .tailer {
 	border-bottom:3px solid #cacaca;

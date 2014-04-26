@@ -319,6 +319,10 @@ body {
 	padding-bottom: 5px;
 }
 
+#content table form {
+	display: inline-block;
+}
+
 /*
 #content .tailer {
 	clear: both;

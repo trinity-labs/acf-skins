@@ -345,6 +345,9 @@ border-bottom:		3px solid #cacaca;
 	margin-left: 		230px;
 	padding-bottom:		5px;
 }
+#content table form {
+	display:		inline-block;
+}
 /*
 #content .tailer {
 	clear: 			both;
