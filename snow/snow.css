@@ -208,13 +208,13 @@ body 	{
 	width:		70%;
 	}
 	
-#content p {
+#content p,pre {
+	background:	#eee;
 	clear:		both;
-	padding:	0em 1em 0.2em 2em;
 	}
 
 #content h1,h2,h3 {
-	background: 	url("ul.png") no-repeat #666;
+	background: 	#666 url("ul.png") no-repeat top left;
 	font-size:	120%;
 	color:		#ffc;
 	float:		left;
@@ -225,7 +225,7 @@ body 	{
 	}
 
 #content h2,h3 {
-	background: 	url("lite-top.png") no-repeat #666;
+	background: 	#666 url("lite-top.png") no-repeat;
 	color:		black;
 	font-weight:	bold;
 	height:		26px;
@@ -239,17 +239,21 @@ body 	{
 	font-size:	80%;
 	}
 
+#content .section1 {
+	padding-bottom: 25px;
+	background:	url("lr.png") no-repeat bottom right;
+	}
+
 #content dl,
 #content .item {
+	background:	#eee;
 	margin:		0;
 	width:		100%;
-	background:	url("lr.png") #eee no-repeat right bottom;
 	display:	block;
 	clear:		both;
 	font-size: 	80%;
 	padding-bottom:	15px; 
 	}
-
 	
 #content dt,
 #content .item .left {
@@ -263,7 +267,6 @@ body 	{
 	white-space:	normal;
 	} 
 
-
 #content dd,
 #content .item .right {
 	padding-top:	15px;
@@ -272,7 +275,8 @@ body 	{
 	border-bottom:	none;
 	}
 
-#content p,input.text,select,textarea,input.password {
+#content .item p,input.text,select,textarea,input.password {
+	background:	#eee;
 	width:		97%;
 	}
 
