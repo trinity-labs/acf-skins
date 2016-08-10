@@ -48,8 +48,8 @@ hr {
 	color: #f33;
 }
 
-input.error, 
-select.error, 
+input.error,
+select.error,
 textarea.error {
 	font-weight: normal;
 	font-style: normal;
@@ -155,7 +155,7 @@ body {
 	padding: 0px 0px 0px 10px;
 	background-image: url("images/alogo.png");
 	background-repeat: no-repeat;
-	background-position: center top; 
+	background-position: center top;
 
 }
 
@@ -178,7 +178,7 @@ body {
 	background-image: none;
 	background-image: url("images/portal-break.png");
 	background-repeat: no-repeat;
-	background-position: center top; 
+	background-position: center top;
 }
 
 #nav ul li ul li {
@@ -230,7 +230,7 @@ body {
 
 	margin:	0px 0px 0px -10px;
 	padding: 4px 15px 4px 10px;
-	
+
 	background-image: url("images/tab-break.png");
 	background-repeat: repeat-x;
 	border: 1px solid #5F8DD3;
@@ -259,7 +259,7 @@ body {
 	border:	1px solid #5F8DD3;
 }
 
-#content h1,h2,h3,h4,h5 { 
+#content h1,h2,h3,h4,h5 {
 	margin-top: 20px;
 	margin-left: 0px;
 	margin-bottom: 5px;
@@ -271,16 +271,16 @@ body {
 	border-bottom: 1px solid #444;
 }
 
-#content h1 { 
+#content h1 {
 	font-size: 22px;
 }
 
-#content h2 { 
+#content h2 {
 	height: 21px;
 	font-size: 18px;
 }
 
-#content h3 { 
+#content h3 {
 	padding-left: 20px;
 	height: 20px;
 	font-size: 17px;
@@ -393,7 +393,7 @@ body {
 	margin-right: 10px;
 	padding: 5px;
 	clear: both;
-	text-align: center; 
+	text-align: center;
 	font-size: 10px;
 	color: #777777;
 }

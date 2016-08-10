@@ -92,7 +92,7 @@ body {
 	background-repeat: 		no-repeat;
 	background-position:	400px 140px;
 }
-#page { 
+#page {
 	position:			relative;
 	left:			0px;
 	top:			0px;
@@ -203,7 +203,7 @@ body {
 	background: 		#dff;
 	background: 		white;
 	font-weight:		bold;
-	text-transform:		uppercase; 
+	text-transform:		uppercase;
 }
 #nav ul li ul li a {
 	clear:			right;
@@ -255,15 +255,15 @@ font-size:12px;
 }
 
 #subnav a.selected {
-color: #003566;	
-text-transform:	uppercase; 
+color: #003566;
+text-transform:	uppercase;
 }
 
 #subnav li.selected {
 background:	#dff;
 background:	white;
 font-weight:	bold;
-color: 		#003566;	
+color: 		#003566;
 }
 
 /*----------------------------------------------------------------------------------
@@ -279,10 +279,10 @@ color: 		#003566;
 	border-left:		1px solid #cacaca;
 border-bottom:		3px solid #cacaca;
 }
-#content h1,h2,h3,h4,h5 { 
+#content h1,h2,h3,h4,h5 {
 	clear:			both;
 	padding-top:		3px;
-	border-bottom: 		1px solid #cacaca; 
+	border-bottom: 		1px solid #cacaca;
 	border-top: 		1px solid #cacaca;
 	font-weight: 		bold;
 	font-size: 		14px;
@@ -290,18 +290,18 @@ border-bottom:		3px solid #cacaca;
 	overflow: 		hidden;
 	vertical-align:		top;
 }
-#content h1 { 
+#content h1 {
 	margin-top:		20px;
 	height: 			17px;
 	background-image: 		url(h1.png);
 	padding-left:		5px;
 }
-#content h2 { 
+#content h2 {
 	height: 			18px;
 	background-image: 		url(h2.png);
 	padding-left:		10px;
 }
-#content h3 { 
+#content h3 {
 	height: 			14px;
 	background-image: 		url(h3.png);
 	font-size: 		12px;
@@ -405,7 +405,7 @@ border-bottom:		3px solid #cacaca;
 	margin-right: 		10px;
 	padding:			5px;
 	clear: both;
-	text-align:		center; 
+	text-align:		center;
 	border-top:		1px solid #d6d6d6;
 	font-size:		10px;
 	color: 			#aaa;

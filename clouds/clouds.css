@@ -70,7 +70,7 @@ body {
 	font-size:			12pt;
 	background:	#eee;
 }
-#page { 
+#page {
 	left:				0px;
 	margin:				20px 5% 20px 5%;
 	background:			white;
@@ -89,7 +89,7 @@ body {
 	background-repeat: 		repeat-x;
 /*	background: 	#777;	*/
 	color:			white;
-	border-bottom: 			3px solid black; 
+	border-bottom: 			3px solid black;
 }
 
 #header a {
@@ -124,11 +124,11 @@ body {
 	right:				0px;
 	top:				20px;
 	width:				100%;
-	font-size:			40px; 
+	font-size:			40px;
 }
 #header p.hostname {
 /*	position:			absolute;
-	top:				55px; 
+	top:				55px;
 	left:				10px;*/
 	float:				left;
 	top:				25px;
@@ -172,7 +172,7 @@ body {
 	overflow: 		hidden;
 	background:		#6688AA;
 	border-top: 		1px solid #7799BB; */
-	padding-left:		5px; 
+	padding-left:		5px;
 /*	padding-top:		5px;*/
 	background: 		silver;
 	font-weight:		bold;
@@ -225,7 +225,7 @@ body {
 #subnav {
 	position:			absolute;
 	top:				71px;
-	right:				5%; 
+	right:				5%;
  	padding-top: 			2px;
 	margin-bottom:			10px;
 /*	background:	blue; */
@@ -279,10 +279,10 @@ body {
 
 /*	margin-left:			200px; */
 }
-#content h1,h2,h3,h4,h5 { 
+#content h1,h2,h3,h4,h5 {
 	margin-left: 			0px;
 	text-align:			left;
-	text-transform:			uppercase; 
+	text-transform:			uppercase;
 	color:				#55d;
 	font-size: 			10pt;
 	font-family:			verdana;
@@ -295,7 +295,7 @@ body {
 
 
 }
-#content h1 { 
+#content h1 {
 	border:				1px solid #777;
 	border-left:			none;
 	border-top:			none;
@@ -306,12 +306,12 @@ body {
 	margin-right:			10px;
 }
 
-#content h2 { 
+#content h2 {
 	padding-left:			10px;
 }
-#content h3 { 
+#content h3 {
 	padding-left:			20px;
-	text-transform:			capitalize; 
+	text-transform:			capitalize;
 }
 /*
 
@@ -413,7 +413,7 @@ body {
 	margin-left:			200px;
 	margin-right:			20px;
 	clear: both;
-	text-align:		center; 
+	text-align:		center;
 	border-top:		1px solid #d6d6d6;
 	font-size:		10px;
 	color: 			#aaa;

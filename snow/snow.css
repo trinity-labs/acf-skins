@@ -1,4 +1,4 @@
-/* "Snow" - a css for Alpine Configuration Framework - 
+/* "Snow" - a css for Alpine Configuration Framework -
  * N. Angelacos 2008 - GPL2 */
 
 /*----------------------------------------------------------------------------------
@@ -7,13 +7,13 @@
 
 @import "../static/tablesorter/theme.default.css";
 
-/* 
+/*
  * -----------------------------------------------------------------------
  * Debug Definitons
  * -----------------------------------------------------------------------
  */
 
-/* 
+/*
  * -----------------------------------------------------------------------
  * General Definitons
  * -----------------------------------------------------------------------
@@ -48,7 +48,7 @@ body 	{
 	}
 
 /*--------------------------------------------------------------------------------*/
-#page 	{ 
+#page 	{
 	position:	relative;
 	}
 
@@ -80,16 +80,16 @@ body 	{
  	display:	none;
 	}
 
-/* The Nav bar */ 
+/* The Nav bar */
 
 #nav {
 	float: left;
 	width:   20%;
 	margin-top:	2em;
 	margin-right:	1em;
-	
+
 	/* font-family:	Arial, sans-serif; */
-	}	
+	}
 
 #nav ul {
 	padding:	0 0 0em 1em;
@@ -113,7 +113,7 @@ body 	{
 #nav  li ul { /* second-level lists - hidden */
 	background: 	url("navbottom.png") #eee  no-repeat left bottom;
 	padding:	0 0 10px 1em;
-	margin:    	0 0 0 -1em;	
+	margin:    	0 0 0 -1em;
 	}
 
 #nav .selected {
@@ -141,7 +141,7 @@ body 	{
 */
 
 #nav a {
-	}	
+	}
 
 #nav .selected a {
 	color: #442;
@@ -149,39 +149,39 @@ body 	{
 	}
 
 /*--------------------------------------------------------------------------------*/
-#main 	{ 
+#main 	{
 	width:		100%;
 	}
 
 /*--------------------------------------------------------------------------------*/
 #subnav {
-	width:	75%;	
+	width:	75%;
 	float:	left;
 	margin-top:	1.5em;
 	padding:	0;
-	border-bottom:	1px #ccc solid; 
+	border-bottom:	1px #ccc solid;
 	}
 
 #subnav ul {
 	display: inline;
 	}
-	
+
 #subnav a {
 	background:	url("litetab.png") top right no-repeat #eee;
 	display:	block;
-	padding:	4px 14px 4px 0px; 
+	padding:	4px 14px 4px 0px;
 	}
 
-#subnav li {                         
-        display:        inline;                              
-        float:          left; 
+#subnav li {
+        display:        inline;
+        float:          left;
         background:     url("litetab.png") top left no-repeat #eee;
         margin-left:	14px;
-	padding:	0px 0px 0px 14px; 
+	padding:	0px 0px 0px 14px;
 	margin-bottom:  -1px;
        }
-       
-          
+
+
 #subnav a:hover {
 	color:		#343434;
 	}
@@ -207,7 +207,7 @@ body 	{
 	margin:		0;
 	width:		70%;
 	}
-	
+
 #content p,pre {
 	background:	#eee;
 	clear:		both;
@@ -220,7 +220,7 @@ body 	{
 	float:		left;
 	width:		98%;
 	padding-left:	2%;
-	margin-top:	1em; 
+	margin-top:	1em;
 	clear:		both;
 	}
 
@@ -252,9 +252,9 @@ body 	{
 	display:	block;
 	clear:		both;
 	font-size: 	80%;
-	padding-bottom:	15px; 
+	padding-bottom:	15px;
 	}
-	
+
 #content dt,
 #content .item .left {
 	float:		left;
@@ -265,7 +265,7 @@ body 	{
 	margin-left:	10px;
 
 	white-space:	normal;
-	} 
+	}
 
 #content dd,
 #content .item .right {
@@ -331,8 +331,8 @@ select:focus, input:focus, textarea:focus {
 	background:	#444;
 	color:		#ffc;
 	}
-	
-	
+
+
 pre {
 	line-height:	100%;
 	display: 	block;
@@ -340,13 +340,13 @@ pre {
 	clear:		both;
 	font-family:	Courier-New, Courier, sans-serif;
 	}
-	
-	
-table { 
+
+
+table {
 	clear:		left;
 	width:		100%;
 	}
-	
+
 table td {
 	white-space:	nowrap;
 	padding-right:	20px;
