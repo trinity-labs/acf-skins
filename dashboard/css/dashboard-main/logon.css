@@ -207,7 +207,9 @@ input#password::-webkit-input-placeholder::before {
 
 .logon .icon-header {
     margin: 0;
+    padding: 0;
 }
+
 
 .logon i.fa-regular.fa-circle-question.fa-2x.about-icon {
     border-left: 1px solid;
