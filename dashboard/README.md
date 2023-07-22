@@ -19,7 +19,7 @@
 
 ✅ Lighttpd Ready - Remove Mini_httpd 
 
-[ACF on Lighttpd](https://gitlab.alpinelinux.org/trinity-labs/mini_httpd-lighttpd)
+[ACF on Lighttpd](https://github.com/trinity-labs/mini_httpd-lighttpd)
 <br>
 <br>
 - <ins>**Features**</ins>
@@ -50,7 +50,7 @@ So we have a basic version checker in `Lua` that need `WAN` access and `DNS` ava
 <br>
 
 Return `Lua` ACF used version (5.4.6) and `ACF Server` version : 
-- **Lighttpd: v.1.4.71 =>** last released on May 27, 2023 - **Light, Fast & Highly customisable | [ACF on Lighttpd](https://gitlab.alpinelinux.org/trinity-labs/mini_httpd-lighttpd)** <br>
+- **Lighttpd: v.1.4.71 =>** last released on May 27, 2023 - **Light, Fast & Highly customisable | [ACF on Lighttpd](https://github.com/trinity-labs/mini_httpd-lighttpd)** <br>
 - **Mini_httpd: v.1.30 =>** last released on Oct 26, 2018 <br>
 <br>
 
