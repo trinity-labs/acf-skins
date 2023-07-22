@@ -95,7 +95,6 @@ else print `NaN`
  <hr>
 This is the convention for ACF Dashboard Dev Core Modules naming.<br>
 When a module is in prod, it's pushed here!
-
  </div>
 <br>
 
