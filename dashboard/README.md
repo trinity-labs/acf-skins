@@ -89,7 +89,7 @@ Return `CPU Model` and `Manufacturer` icon. If know, return `board` and `bios` i
 else print `NaN`
 
  <hr>
- 
+
 > <ins>**ACF [Group] [Process] - [Short-Name]**</ins>
 
  <hr>
