@@ -17,7 +17,7 @@ local hostname = ""
 if session.userinfo and session.userinfo.userid and viewlibrary and viewlibrary.dispatch_component then
 	local result = viewlibrary.dispatch_component("alpine-baselayout/hostname/read", nil, true)
 	if result and result.value then
-		hostname = result.value
+		hostname = string.gsub(result.value, "\n", "" )
 	end
 end
 %>
@@ -104,7 +104,6 @@ end
 <% if pageinfo.skinned ~= "false" then %>
 
 <header id="header">
-
 				<%
 					local ctlr = pageinfo.script .. "/acf-util/logon/"
 
