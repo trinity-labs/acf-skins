@@ -18,15 +18,20 @@
 	
 	header {
     height: 4rem;
-	padding: 0 !important;
+    padding: 0 !important;
     position: absolute !important;
     display: flex;
     background: white !important;
     flex-direction: row;
     flex-wrap: nowrap;
     background-position: 2rem center !important;
-    justify-content: center;
+    justify-content: space-around !important;
     width: 100%;
+    align-items: center;
+	}
+	
+	#header-links {
+    justify-content: space-around !important;
 	}
 	
 	#content p,
@@ -147,7 +152,7 @@
 	}
 	
 	.icon-header {
-    padding: 1.25rem 1rem;
+    padding: 1.25rem 0.5rem;
     margin: 0 0.5rem 0 0;
 	}
 
@@ -202,9 +207,14 @@
 	}
 	
 	#text-user-logon {
-    padding: 0.33rem 0.5rem !important;
+    white-space: nowrap;
+    padding: 0.33rem 0.5rem 0.35rem!important;
     font-size: 0.5rem;
-	margin: 0 1.5rem 0 0 !important;
+    text-overflow: ellipsis;
+    margin: 0 1.5rem 0 0 !important;
+    width: 5rem !important;
+    overflow: hidden;
+    text-align: center;
 	}
 	
 	#user-logon {
