@@ -27,7 +27,7 @@ end
 ==============================================================
       🟦 Alpine Linux Admin Dashboard | v 1.0.0 - ACF
 ==============================================================
-* Product Page: ACF Dashboard Skin (https://gitlab.alpinelinux.org/trinity-labs/dashboard-skin)
+* Product Page: ACF Dashboard Skin (https://gitlab.alpinelinux.org/trinity-labs/acf-skins/-/blob/master/dashboard)
 * Created by: T. Bonnin for Alpine Configuration Framework (ACF) based on N. Angelacos previous work
 * License: Licensed under the terms of GPL2
 * Copyright : (C) 2007 N. Angelacos for ACF - (C) 2023 T. Bonnin for DashBoard App
@@ -115,7 +115,7 @@ end
 						print("<div id='header-links'><a id='logon' class='icon-header' title='Logon' href=\""..html.html_escape(ctlr).."logon\"><i class='fa-solid fa-lock fa-2x logon-icon'></i></a>" )
 					end
 				%>
-				<a id="about-link" class="icon-header" href="https://gitlab.alpinelinux.org/trinity-labs/dashboard-skin" target="_blank" title="About"><i class="fa-regular fa-circle-question fa-2x about-icon"></i></i></a>
+				<a id="about-link" class="icon-header" href="https://gitlab.alpinelinux.org/trinity-labs/acf-skins/-/blob/master/dashboard" target="_blank" title="About"><i class="fa-regular fa-circle-question fa-2x about-icon"></i></i></a>
 				<%
 					if session.userinfo and session.userinfo.userid then
 						print("<span id='text-user-logon' class='text-user-"..(session.userinfo.userid).."' title='User @ HOST'>"..(session.userinfo.userid).." @ "..string.upper(hostname or "unknown").."</span>")
