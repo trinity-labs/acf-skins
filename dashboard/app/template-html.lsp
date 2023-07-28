@@ -5,14 +5,14 @@
 Status: 200 OK
 Content-Type: text/html
 <%
+-- Set session cookie
 if (session.id) then
 	io.write( html.cookie.set("sessionid", session.id) )
 else
 	io.write (html.cookie.unset("sessionid"))
 end
-%>
 
-<%
+-- Hide Hostname for no-logon users
 local hostname = ""
 if session.userinfo and session.userinfo.userid and viewlibrary and viewlibrary.dispatch_component then
 	local result = viewlibrary.dispatch_component("alpine-baselayout/hostname/read", nil, true)
@@ -80,6 +80,8 @@ end
 		<script type="application/javascript" src="https://unpkg.com/jquery"></script>
 		<!-- GLOBAL FUNCTIONS -->
 		<script type="application/javascript" src="<%= html.html_escape(pageinfo.wwwprefix..pageinfo.skin.."/"..posix.basename(pageinfo.skin)..".js") %>"></script>
+		<!-- HIDE LOGGON PAGE FOR AUTH USERS -->
+		<script type="application/javascript">	let user = "<%= session.userinfo %>"; if ((user !== "nil") && (window.location.href.indexOf("logon/logon") > -1)) {window.location.href = '//' + window.location.hostname + '/cgi-bin/acf/acf-util/welcome/read'}</script>
 </head>
 		<% end -- pageinfo.skinned %>
 <%
