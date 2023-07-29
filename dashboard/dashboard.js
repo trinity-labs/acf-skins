@@ -1,10 +1,7 @@
 // GLOBAL JS FUNCTIONS
-
 		$(function(){
 				$(":input:not(input[type=button],input[type=submit],button):enabled:not([readonly]):visible:first").focus();
 			});
-			
-
 // Show Password on Logon page
 		function showPassword() {
 			var field = document.querySelector('#password input');
@@ -83,9 +80,7 @@
 				$("#content").animate({width: '80%'});
 				$("#subnav").animate({width: '80%'});
 				$("#nav").css({display: 'block'});
-				$("#toggle").removeClass("not_active");
-			
-				
+				$("#toggle").removeClass("not_active");	
 			}
 			window.localStorage.setItem('nav', updated);
 			};		
@@ -101,35 +96,13 @@
 				$("#toggle-degree").toggleClass("celsius");
 				$("#toggle-degree").removeClass("fahrenheit");
 			}
-		
 			window.localStorage.setItem('toggle-degree', updated);
-
-			};						
-// IMPORT UPTIME FOR JS LIVE TIMER
-	if(window.location.href.indexOf("welcome/read") > -1){
-	let delay = () => 
-	{
-	increment += 1;
-	// CONVERT JS UPTIME
-		var js_uptime = parseInt(increment);
-		var js_centuries = Math.floor((js_uptime / (3600*24) / 365) / 100);
-		var js_years = Math.floor((js_uptime / (3600*24) / 365) % 100);
-		var js_mounths = Math.floor((((js_uptime / (3600 * 24)) % 365) % 365) / 30);
-		var js_days = Math.floor((((js_uptime / (3600 * 24)) % 365) % 365) % 30)
-		var js_hours = Math.floor(js_uptime % (3600*24) / 3600);
-		var js_minutes = Math.floor(js_uptime % 3600 / 60);
-		var js_seconds = Math.floor(js_uptime % 60);
-	// FORMAT JS UPTIME UP TO CENTURIES
-		var centuries_display = js_centuries > 0 ? js_centuries + (js_centuries <= 1 ? " Century " : " Centuries ") : "";
-		var years_display = js_years > 0 ? js_years + (js_years <= 1 ? " Year " : " Years ") : "";
-		var mounths_display = js_mounths > 0 ? js_mounths + (js_mounths <= 1 ? " Mounth " : " Mounths ") : "";
-		var days_display = js_days > 0 ? js_days + (js_days <= 1 ? " Day " : " Days ") : "";
-		var hours_display = js_hours < 10 ? "0" + js_hours + "h " : js_hours + "h ";
-		var minutes_display = js_minutes < 10 ? "0" + js_minutes + "m " : js_minutes + "m ";
-		var secondes_display = js_seconds < 10 ? "0" + js_seconds + "s" : js_seconds + "s";
-	// RETURN JS FORMATED TIME
-		return centuries_display + years_display + mounths_display + days_display + hours_display + minutes_display + secondes_display;	
-	};
-	// JS FORMATED TIME LIVE COUNT
-	setInterval(() => document.getElementById("uptime").innerHTML = delay(), 1000);
-	};
+			};
+// Toogle Dark Theme			
+			function darkMode() {
+				var updated = window.localStorage.getItem('html','dark-mode');
+				var element = document.querySelector("html");
+				element.classList.toggle("dark-theme");
+				window.localStorage.setItem('html', updated);
+				console.log(updated)
+			};
