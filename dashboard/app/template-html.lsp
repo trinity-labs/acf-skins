@@ -177,6 +177,15 @@ end
 				</div> <!-- subnav -->
 
 				<div id="content">
+				<!-- Theme Toggle -->
+				<div class="theme-block-toggle">
+					<span id="theme-conv" class="temp-convert"><i class="fa-regular fa-moon"></i></span>
+						<label class="switch">
+							<input onclick="darkMode()" id="theme-toggle" type="checkbox">
+							<span class="slider round"></span>
+						</label>
+					<span id="theme-conv" class="temp-convert"><i class="fa-solid fa-sun"></i></span>
+				</div>
 <% end --pageinfo.skinned %>
 
 					<% pageinfo.viewfunc(viewtable, viewlibrary, pageinfo, session) %>
