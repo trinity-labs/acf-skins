@@ -14,7 +14,7 @@
 	if session.userinfo and session.userinfo.userid and viewlibrary and viewlibrary.dispatch_component then
 	local result = viewlibrary.dispatch_component("alpine-baselayout/hostname/read", nil, true)
 		if result and result.value then
-			hostname = result.value
+		hostname = string.gsub(result.value, "\n", "" )
 		end
 	end
 
@@ -134,8 +134,8 @@ function blocksToSize(octets)
 end
 
 -- GET PHYSICAL HDD	
-	local physicalDisk = string.match(disk.value.partitions.value, "(sd%a)")
-	local physicalCapacity = string.gsub(string.match(disk.value.partitions.value, "(%d+.sd%a)"), "%D", "")
+	-- local physicalDisk = string.match(disk.value.partitions.value, "(sd%a)")
+	-- local physicalCapacity = string.gsub(string.match(disk.value.partitions.value, "(%d+.sd%a)"), "%D", "")
 %>
 
 <% local header_level = htmlviewfunctions.displaysectionstart(cfe({label="Dashboard"}), page_info) %>
@@ -170,9 +170,36 @@ end
 			<span class="data-title">Uptime | </span>
 				<span id="uptime" class="uptime">
 				<%= uptime %><br>
-<script type="application/javascript">
+<script type="application/javascript" defer>
 // IMPORT UPTIME FOR JS LIVE TIMER
-	let increment = <%= up_time %>;
+	if(window.location.href.indexOf("welcome/read") > -1){
+	let increment = <%= up_time or "unknow"%>;
+	let delay = () => 
+	{
+	increment += 1;
+	// CONVERT JS UPTIME
+		var js_uptime = parseInt(increment);
+		var js_centuries = Math.floor((js_uptime / (3600*24) / 365) / 100);
+		var js_years = Math.floor((js_uptime / (3600*24) / 365) % 100);
+		var js_mounths = Math.floor((((js_uptime / (3600 * 24)) % 365) % 365) / 30);
+		var js_days = Math.floor((((js_uptime / (3600 * 24)) % 365) % 365) % 30)
+		var js_hours = Math.floor(js_uptime % (3600*24) / 3600);
+		var js_minutes = Math.floor(js_uptime % 3600 / 60);
+		var js_seconds = Math.floor(js_uptime % 60);
+	// FORMAT JS UPTIME UP TO CENTURIES
+		var centuries_display = js_centuries > 0 ? js_centuries + (js_centuries <= 1 ? " Century " : " Centuries ") : "";
+		var years_display = js_years > 0 ? js_years + (js_years <= 1 ? " Year " : " Years ") : "";
+		var mounths_display = js_mounths > 0 ? js_mounths + (js_mounths <= 1 ? " Mounth " : " Mounths ") : "";
+		var days_display = js_days > 0 ? js_days + (js_days <= 1 ? " Day " : " Days ") : "";
+		var hours_display = js_hours < 10 ? "0" + js_hours + "h " : js_hours + "h ";
+		var minutes_display = js_minutes < 10 ? "0" + js_minutes + "m " : js_minutes + "m ";
+		var secondes_display = js_seconds < 10 ? "0" + js_seconds + "s" : js_seconds + "s";
+	// RETURN JS FORMATED TIME
+		return centuries_display + years_display + mounths_display + days_display + hours_display + minutes_display + secondes_display;	
+	};
+	// JS FORMATED TIME LIVE COUNT
+		setInterval(() => document.getElementById("uptime").innerHTML = delay(), 1000);
+	};
 </script>
 		</span>
 		</div>
@@ -237,11 +264,11 @@ end
 				<span class="data-title">Wan IP : </span>
 					<span class="value-title value-net-wan"></span><a href="https://ifconfig.me" target="_blank" title="🔗 https://ifconfig.me"><%= net.value.wanIP.value %><i class="fa-solid fa-up-right-from-square icon-listing"></i></a>
 			</p>
-			<!-- <label class="switch">
+			<label class="switch">
 				<input type="checkbox">
 					<span class="slider round"></span>
 			</label>
-				<span id="temp-conv" class="temp-convert">°C | °F</span> -->
+				<span id="temp-conv" class="temp-convert">°C | °F</span>
 			<div id="procTemp" class="temperature">
 				<div class="data-cpu-temp">
 				</div>
@@ -259,6 +286,7 @@ end
 			</div>
 			<div id="cpuTemp" class="dashboard-infos dash-info-temp">
 			<%
+			-- GET & FORMAT CPU TEMP
 			if ((tonumber(proc.value.temp.value)) ~= nil) and ((tonumber(proc.value.temp.value)) < 50000) then
 			print ("<span class='normal'>" .. math.floor(tonumber(proc.value.temp.value / 1000)) .. "<sup id='temp-unit'>°C</sup></span>")
 			elseif ((tonumber(proc.value.temp.value)) ~= nil) and ((tonumber(proc.value.temp.value)) >= 50000) then
@@ -270,10 +298,10 @@ end
 			end
 			%>
 			<script type="application/javascript" defer>
+			// FORMATED TEMP JS LIVE TIMER
 			async function load() {
 				let url = '<%= html.html_escape(page_info.script .. "/alpine-baselayout/health/proc?viewtype=json") %>';
 				let obj = await (await fetch(url)).json();
-			
 				if ((obj.value.temp.value) < 50000) {
 					document.getElementById("cpuTemp").innerHTML = ("<span class='normal'>" + (obj.value.temp.value) / 1000) + "<sup id='temp-unit'>°C</sup></span>";
 				} else if ((obj.value.temp.value) >= 50000) {
@@ -381,11 +409,12 @@ $(function memChart() {
 		type: 'doughnut',
 		data,
 		options: {
-			borderColor: '#fbfbfb',
+			borderColor: 'rgb(26 35 46 / 0%)',
 			responsive: true,
 			maintainAspectRatio: false,
 			rotation: -135,
 			circumference: 270,
+			spacing: 5,
 			backgroundColor: [
                     '#006787',
                     '#0075af',
@@ -413,15 +442,13 @@ $(function memChart() {
 			<div id="chartNetwork"> </div>
 			<canvas id="networkChart" class="data-chart block-chart"></canvas>
 		</div>
-<div id="demo"></div>
+<!-- <div id="demo"></div>-->
 
 <!-- Dashboard Main Block - NETWORK CHART.JS -->
 <script type="application/javascript" src="https://cdn.jsdelivr.net/npm/luxon@latest"></script>
 <script type="application/javascript" src="https://cdn.jsdelivr.net/npm/chartjs-adapter-luxon@latest/dist/chartjs-adapter-luxon.umd.min.js"></script>
 <script type="application/javascript" src="https://cdn.jsdelivr.net/npm/chartjs-plugin-streaming@latest"></script>		
 <script type="application/javascript" defer>
-	var interval = 1000;
-	var duration = 60000;
 	var lastdata = <%= json.encode(netstats) %>;
 	var chartdata = <% -- Generate the data structure in Lua and then convert to json
 			local chartdata = {}
@@ -436,34 +463,14 @@ $(function memChart() {
    $.getJSON(
      '<%= html.html_escape(page_info.script .. "/alpine-baselayout/health/networkstats") %>', {viewtype:'json'}, 
 	function(data) {
-				if (lastdata != null){
-					if (data.timestamp <= lastdata.timestamp) return false;
-					var timestamp = data.timestamp * 1000;
-					var multiplier = 1 / (data.timestamp - lastdata.timestamp);
-					var shiftcount = null;
-					$.each(lastdata.value, function(key,val){
-						chartdata[key+"RX"].data.push([timestamp, (data.value[key].RX.bytes - lastdata.value[key].RX.bytes)*multiplier]);
-						chartdata[key+"TX"].data.push([timestamp, (data.value[key].TX.bytes - lastdata.value[key].TX.bytes)*multiplier]);
-						if (shiftcount == null) {
-							shiftcount = 0;
-							$.each(chartdata[key+"RX"].data, function(key,val){
-								if (val[0] < timestamp-duration)
-									shiftcount += 1;
-								else
-									return false;
-							});
-						}
-						for (i=0; i<shiftcount; i++){
-							chartdata[key+"RX"].data.shift();
-							chartdata[key+"TX"].data.shift();
-						}
-					});
-				}
 				lastdata = data;
-				document.getElementById("demo").innerHTML = JSON.stringify(lastdata.value.eth0);
+				document.getElementById("demo").innerHTML = JSON.stringify(lastdata);
 			});
 };
-	setInterval(displayStats, 1000);
+//	setInterval(displayStats, 1000);
+	
+	
+
 $(function networkChart() {
 // Setup Block
 	const data = {
@@ -502,7 +509,7 @@ $(function networkChart() {
 						chart.data.datasets.forEach(dataset => {
 							dataset.data.push({
 							x: Date.now(),
-							y: setInterval(0, 1000)
+							y: setInterval(JSON.stringify(lastdata), 1000)
 							})
 						})
 					}
@@ -537,8 +544,6 @@ $(function networkChart() {
 					</p>
 						<div class="section-disk" id="disk-partition-view">
 							<div id="partition-table">
-								<!--<% local disklines = format.string_to_table(physicalDisk, "\n") %>-->
-								<%= physicalDisk %> : <%= blocksToSize(tonumber(physicalCapacity) * 1000) %>
 								<% displaydisk = function(disk, name)
 								io.write('<table id="legend-title" style="margin:0px;padding:0px;border:0px;margin-top:5px;">\n')
 								io.write("	<tr>\n")
