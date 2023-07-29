@@ -1,0 +1,89 @@
+.dark-theme,
+.dark-theme body,
+.dark-theme #main,
+.dark-theme .page {
+    background: #171f28 !important;
+}
+
+.dark-theme h1,
+.dark-theme h4,
+.dark-theme h1::before,
+.dark-theme h4::before {
+    color: #bbbbbb !important;
+}
+
+.dark-theme pre,
+.dark-theme .dashboard-block {
+    background: #1a232e;
+	color: grey;
+}
+
+.dark-theme header {
+    background: #1a232e;
+    background-image: url(../../img/logos/alpine-linux-white.png);
+}
+
+.dark-theme .icon i,
+.dark-theme .icon-header i{
+    color: white !important;
+}
+
+.dark-theme #procTemp,
+.dark-theme #disk-partition-view {
+    background: #171f28;
+}
+
+.dark-theme #nav {
+    background: #1a232e;
+}
+
+/* Scrollbar */
+ 
+.dark-theme ::-webkit-scrollbar-thumb {
+  background: #1b2530; 
+}
+
+/* Handle on hover */
+.dark-theme ::-webkit-scrollbar-thumb:hover {
+  background: #1b2530; 
+}
+
+.dark-theme #nav ul li {
+    background: #171f28;
+}
+
+.dark-theme #nav .category-title {
+    background: #2e363e;
+}
+
+.dark-theme #text-user-logon {
+    background: #0e1116;
+}
+
+.dark-theme .corporate-blue,
+.dark-theme .uptime,
+.dark-theme .data-system-up-time::before {
+    color: #028ab5 !important;
+}
+
+.dark-theme .version-check-ok,
+.dark-theme .icon-kernel-ok {
+    color: #21d700;
+}
+
+.dark-theme #content .chart-bar td {
+    border: 3px solid #1a232e;
+}
+
+.dark-theme input:checked + .slider {
+    background-color: #028ab5;
+}
+
+.dark-theme #legend-object {
+    box-shadow: 2px 2px 30px #00000029;
+    border: 1px solid rgb(49 54 60 / 47%) !important;
+}
+
+.dark-theme #footer {
+    background: #1a232e;
+}

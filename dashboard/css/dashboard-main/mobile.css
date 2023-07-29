@@ -21,7 +21,8 @@
     padding: 0 !important;
     position: absolute !important;
     display: flex;
-    background: white !important;
+    background: white;
+	background-image: none !important;
     flex-direction: row;
     flex-wrap: nowrap;
     background-position: 2rem center !important;

@@ -46,7 +46,7 @@ header {
     background-size: 7.5rem !important;
     flex-direction: row;
     flex-wrap: nowrap;
-    background-image: url(../../img/logos/alpine-linux.png) !important;
+    background-image: url(../../img/logos/alpine-linux.png);
     background-position: 7rem center !important;
     justify-content: space-between;
     background-repeat: no-repeat !important;
