@@ -138,3 +138,10 @@ skin=/skins/dashboard
 - **Dashboard**
 
 <img src="https://github.com/trinity-labs/dashboard-skin/assets/45216746/55bfd103-cc4f-47c7-9d84-f4f649abfada">
+<br>
+<br>
+
+- **Dashboard Dark Theme**
+
+<img src="https://github.com/trinity-labs/trinity-labs/assets/45216746/f457c54e-1ffc-4922-9f21-eaea0e7822b4">
+
