@@ -7,7 +7,7 @@ See [here](https://gitlab.alpinelinux.org/trinity-labs/acf-skins/-/blob/master/d
 - **Upgrade ACF Design up to 2020 year**
 - **Add monitoring functions (bios, mobo, uptime, cpu temp, etc...)**
 - **Fit on mobile and tablet**
-- **JS effect**
+- **JS effect: HighLightJS, ChartJS, Toggle Menu and Dark Theme**
 - **Increase speed with lighttpd (gzip comp, http2, headers option, etc...)**
 
 Request ACF Official logo changing if possible to modernize ACF<br> 
