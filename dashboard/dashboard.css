@@ -28,6 +28,7 @@
 /*----------------------------------------------------------------------------------
  * DASHBOARD MAIN DESIGN
  *--------------------------------------------------------------------------------*/
+@import "css/dashboard-main/dark.css";
 @import "css/dashboard-main/content.css";
 @import "css/dashboard-main/footer.css";
 @import "css/dashboard-main/header.css";
