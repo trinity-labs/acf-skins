@@ -51,6 +51,22 @@
 				$("#nav").toggleClass(updated);
 				$("#toggle").toggleClass(updated);
 			}
+// Save theme state			
+			var updated = window.localStorage.getItem('html', updated);	
+			if (window.localStorage.getItem('html') === 'light-theme') {
+				$("#html").toggleClass("light-theme");
+			} else {
+				$("#html").toggleClass("dark-theme");
+				$("#theme-toggle").prop( "checked", true );
+			};
+			if (updated === '') {
+				window.localStorage.setItem('html', 'light-theme');
+				$("#html").toggleClass("light-theme");
+			} else {
+				window.localStorage.getItem('html', updated);
+				$("html").toggleClass(updated);
+			}
+			
 // Save degree conversion state 
 			var updated = window.localStorage.getItem('toogle-degree', updated);	
 			if (window.localStorage.getItem('toogle-degree') === 'celsius') {
@@ -63,7 +79,7 @@
 		});
 // Toogle collapse menu
 			function toggleMenu() {  
-				var updated = window.localStorage.getItem('nav', updated);
+			var updated = window.localStorage.getItem('nav', updated);
 				$("#nav").toggleClass("active");
 				$("#toggle").toggleClass("active");
 			if (window.localStorage.getItem('nav') === 'active') {
@@ -100,9 +116,16 @@
 			};
 // Toogle Dark Theme			
 			function darkMode() {
-				var updated = window.localStorage.getItem('html','dark-mode');
-				var element = document.querySelector("html");
-				element.classList.toggle("dark-theme");
-				window.localStorage.setItem('html', updated);
-				console.log(updated)
+			var updated = window.localStorage.getItem('html', updated);
+			$("#html").toggleClass("light-theme");
+			if (window.localStorage.getItem('html') === 'light-theme') {
+				updated = 'dark-theme';
+				$("html").toggleClass("dark-theme");
+				$("html").removeClass("light-theme");
+			} else {
+				updated = 'light-theme';
+				$("html").toggleClass("light-theme");
+				$("html").removeClass("dark-theme");
+			}
+			window.localStorage.setItem('html', updated);
 			};
