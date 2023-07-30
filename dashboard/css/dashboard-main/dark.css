@@ -87,3 +87,7 @@
 .dark-theme #footer {
     background: #1a232e;
 }
+
+.dark-theme #footer a {
+    color: white !important;
+}
