@@ -3,8 +3,9 @@
  *----------------------------------------------------------------------------------
  */
 
-.logon-logon {
-    background: url(../../img/backgrounds/background-alpine-logon.jpg) no-repeat;
+.logon-logon,
+.dark-theme .logon-logon {
+    background: url(../../img/backgrounds/background-alpine-logon.jpg) no-repeat !important;
     background-size: cover !important;
 	background-position: center !important;
     display: flex;
@@ -21,7 +22,7 @@
 }
 
 .logon-logon #header {
-    background-image: url(../../img/logos/logo-alpine-linux-white.png) !important;
+    background-image: url(../../img/logos/alpine-linux-white.png) !important;
     position: relative !important;
     border-radius: 10px 10px 0 0 !important;
     background-position: 3.5rem center !important;
@@ -49,8 +50,13 @@
     flex-direction: column;
     justify-content: space-around;
     align-items: center;
+    background: none !important;
     flex-wrap: nowrap;
     padding: 1rem 3.5rem 0;
+}
+
+.logon-logon .theme-block-toggle {
+    display: none !important;
 }
 
 .logon-logon .item {
@@ -63,7 +69,7 @@
 }
 
 #page-logon {
-    background: rgb(0 0 0 / 50%);
+    background: rgb(0 0 0 / 50%) !important;
     border-radius: 0 0 10px 10px !important;
     width: 480px;
     padding: 0 !important;
