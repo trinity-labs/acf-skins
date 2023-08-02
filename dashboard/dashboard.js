@@ -70,11 +70,12 @@
 // Save Degree state
 			var degreeUpdated = window.localStorage.getItem('toggle-degree', degreeUpdated);	
 			if (window.localStorage.getItem('toggle-degree') === 'celsius') {
-			$("#toggle-degree").prop( "checked", false );
+				$("#toggle-degree").prop( "checked", false );
 				$("#temp-cap-normal").html("50°<sup>C</sup>");
 				$("#temp-cap-medium").html("50°<sup>C</sup>");
 				$("#temp-cap-hot").html("75°<sup>C</sup>");
 			} else {
+				$("#toggle-degree").prop( "checked", true );
 				$("#temp-cap-normal").html("122°<sup>F</sup>");
 				$("#temp-cap-medium").html("122°<sup>F</sup>");
 				$("#temp-cap-hot").html("167°<sup>F</sup>");
