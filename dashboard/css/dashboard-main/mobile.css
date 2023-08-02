@@ -50,7 +50,6 @@
 
 	.logon.logon-logon {
     position: relative;
-	top: -1rem;
     overflow: hidden !important;
     width: 100%;
 	}
@@ -115,7 +114,11 @@
     justify-content: space-around;
     align-items: center;
     flex-wrap: nowrap;
-    padding: 1rem 0 0;
+    padding: 0;
+	}
+	
+	.logon-logon input {
+	width: 97% !important;
 	}
 	
 	.logon-logon #content {
@@ -125,7 +128,7 @@
 	}
 	
 	.logon-logon #header {
-    background-image: url(../../img/logos/logo-alpine-linux-white.png) !important;
+    background-image: url(../../img/logos/alpine-linux-white.png) !important;
     position: relative !important;
     border-radius: 10px 10px 0 0 !important;
     background-position: 1.25rem center !important;
@@ -134,8 +137,16 @@
     justify-content: flex-end !important;
     background-color: #006787 !important;
     width: 90vw;
-    height: 3.5rem !important;
+    height: 4rem !important;
     background-repeat: no-repeat !important;
+	}
+	
+	.logon-logon .item:last-child {
+    margin: -0.5rem 0 0 !important;
+	}
+	
+	.logon .item {
+    margin-top: 2rem;
 	}
 
 	.dashboard-main {
@@ -149,7 +160,7 @@
 	}
 	
 	.logon button#showPass {
-    right: -0.8rem !important;
+    right: -0.15rem !important;
 	}
 	
 	.icon-header {
@@ -220,6 +231,12 @@
 	
 	#user-logon {
     margin: 0 0.75rem 0 0;
+	}
+	
+	.logon-logon #footer a {
+    color: white !important;
+    top: 2rem !important;
+    position: relative;
 	}
 	
 	#footer {

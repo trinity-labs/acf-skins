@@ -50,6 +50,7 @@
     flex-direction: column;
     justify-content: space-around;
     align-items: center;
+    height: auto !important;
     background: none !important;
     flex-wrap: nowrap;
     padding: 1rem 3.5rem 0;
@@ -173,9 +174,10 @@ input#password::-webkit-input-placeholder::before {
 
 .logon-logon #footer {
     margin: 0;
-    padding: 1rem 0 0 !important;
+    padding: 1rem 0 0;
     background: none !important;
     border: none !important;
+	padding: 0 !important;
 }
 
 .logon-logon #footer a {

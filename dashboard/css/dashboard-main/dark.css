@@ -1,3 +1,8 @@
+/*----------------------------------------------------------------------------------
+ * PAGE > DARK THEME
+ *----------------------------------------------------------------------------------
+ */
+
 .dark-theme,
 .dark-theme body,
 .dark-theme #main,
@@ -28,6 +33,10 @@
     color: white !important;
 }
 
+.dark-theme .normal {
+    color: #028ab5 !important;
+}
+
 .dark-theme #procTemp,
 .dark-theme #disk-partition-view {
     background: #171f28;
@@ -50,6 +59,21 @@
 
 .dark-theme #nav ul li {
     background: #171f28;
+}
+
+.dark-theme #system .selected.item-field {
+    background: #6300d2;
+    color: white !important;
+}
+
+.dark-theme #applications .selected.item-field {
+    background: #2743a9;
+    color: white !important;
+}
+
+.dark-theme #networking .selected.item-field {
+    background: #005179;
+    color: white !important;
 }
 
 .dark-theme #nav .category-title {

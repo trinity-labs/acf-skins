@@ -43,7 +43,7 @@ header {
     box-shadow: 2px 2px 30px #00000029;
     background: white;
     display: flex;
-    background-size: 7.5rem !important;
+    background-size: 8rem !important;
     flex-direction: row;
     flex-wrap: nowrap;
     background-image: url(../../img/logos/alpine-linux.png);
