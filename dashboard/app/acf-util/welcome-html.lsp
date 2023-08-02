@@ -265,7 +265,7 @@ end
 					<span class="value-title value-net-wan"></span><a href="https://ifconfig.me" target="_blank" title="🔗 https://ifconfig.me"><%= net.value.wanIP.value %><i class="fa-solid fa-up-right-from-square icon-listing"></i></a>
 			</p>
 			<label class="switch">
-				<input type="checkbox">
+				<input onclick="toggleDegree()" id="toggle-degree" type="checkbox">
 					<span class="slider round"></span>
 			</label>
 				<span id="temp-conv" class="temp-convert">°C | °F</span>
@@ -275,13 +275,13 @@ end
 			<div class="data-title temp-desc">
 				<p class="title-temp-legend">CPU Temp : </p>
 					<p class="legend temp-legend temp-normal">
-					Temp° < 50
+					Temp < <span id="temp-cap-normal">50°C</span>
 				</p>
 				<p class="legend temp-legend temp-medium">
-					Temp° > or = 50
+					Temp > or = <span id="temp-cap-medium">50°C</span>
 				</p>
 				<p class="legend temp-legend temp-hot">
-					Temp° > or = 75
+					Temp > or = <span id="temp-cap-hot">75°C</span>
 				</p>
 			</div>
 			<div id="cpuTemp" class="dashboard-infos dash-info-temp">
@@ -298,16 +298,31 @@ end
 			end
 			%>
 			<script type="application/javascript" defer>
+			// CONVERT TEMP TO FAHRENHEIT
+			if (((<%= tonumber(proc.value.temp.value) %>) < 50000) && (window.localStorage.getItem('toggle-degree') === 'fahrenheit')) {
+					document.getElementById("cpuTemp").innerHTML = ("<span class='normal'>" + (Math.floor(((<%= tonumber(proc.value.temp.value) %>) / 1000) * 9 / 5) + 32)) + "<sup id='temp-unit'>°F</sup></span>";
+				} else if (((<%= tonumber(proc.value.temp.value) %>) >= 50000) && (window.localStorage.getItem('toggle-degree') === 'fahrenheit')) {
+					document.getElementById("cpuTemp").innerHTML = ("<span class='medium'>" + (Math.floor(((<%= tonumber(proc.value.temp.value) %>) / 1000) * 9 / 5) + 32)) + "<sup id='temp-unit'>°F</sup></span>";
+				} else if (((<%= tonumber(proc.value.temp.value) %>) >= 75000) && (window.localStorage.getItem('toggle-degree') === 'fahrenheit')) {
+					document.getElementById("cpuTemp").innerHTML = ("<span class='hot'>" + (Math.floor(((<%= tonumber(proc.value.temp.value) %>) / 1000) * 9 / 5) + 32)) + "<sup id='temp-unit'>°F</sup></span>";
+				}
 			// FORMATED TEMP JS LIVE TIMER
 			async function load() {
 				let url = '<%= html.html_escape(page_info.script .. "/alpine-baselayout/health/proc?viewtype=json") %>';
 				let obj = await (await fetch(url)).json();
-				if ((obj.value.temp.value) < 50000) {
+				if (((obj.value.temp.value) < 50000) && (window.localStorage.getItem('toggle-degree') === 'celsius')) {
 					document.getElementById("cpuTemp").innerHTML = ("<span class='normal'>" + (obj.value.temp.value) / 1000) + "<sup id='temp-unit'>°C</sup></span>";
-				} else if ((obj.value.temp.value) >= 50000) {
+				} else if (((obj.value.temp.value) >= 50000) && (window.localStorage.getItem('toggle-degree') === 'celsius')) {
 					document.getElementById("cpuTemp").innerHTML = ("<span class='medium'>" + (obj.value.temp.value) / 1000) + "<sup id='temp-unit'>°C</sup></span>";
-				} else if ((obj.value.temp.value) >= 75000) {
+				} else if (((obj.value.temp.value) >= 75000) && (window.localStorage.getItem('toggle-degree') === 'celsius')) {
 					document.getElementById("cpuTemp").innerHTML = ("<span class='hot'>" + (obj.value.temp.value) / 1000) + "<sup id='temp-unit'>°C</sup></span>";
+			// FORMATED TEMP TO FAHRENHEIT
+				} else if (((obj.value.temp.value) < 50000) && (window.localStorage.getItem('toggle-degree') === 'fahrenheit')) {
+					document.getElementById("cpuTemp").innerHTML = ("<span class='normal'>" + (Math.floor(((obj.value.temp.value) / 1000) * 9 / 5) + 32)) + "<sup id='temp-unit'>°F</sup></span>";
+				} else if (((obj.value.temp.value) >= 50000) && (window.localStorage.getItem('toggle-degree') === 'fahrenheit')) {
+					document.getElementById("cpuTemp").innerHTML = ("<span class='medium'>" + (Math.floor(((obj.value.temp.value) / 1000) * 9 / 5) + 32)) + "<sup id='temp-unit'>°F</sup></span>";
+				} else if (((obj.value.temp.value) >= 75000) && (window.localStorage.getItem('toggle-degree') === 'fahrenheit')) {
+					document.getElementById("cpuTemp").innerHTML = ("<span class='hot'>" + (Math.floor(((obj.value.temp.value) / 1000) * 9 / 5) + 32)) + "<sup id='temp-unit'>°F</sup></span>";
 				} else {
 					document.getElementById("cpuTemp").innerHTML = ("<span class='nan'>NaN</span>");
 				};
@@ -509,7 +524,7 @@ $(function networkChart() {
 						chart.data.datasets.forEach(dataset => {
 							dataset.data.push({
 							x: Date.now(),
-							y: setInterval(JSON.stringify(lastdata), 1000)
+							// y: setInterval(JSON.stringify(lastdata), 1000)
 							})
 						})
 					}

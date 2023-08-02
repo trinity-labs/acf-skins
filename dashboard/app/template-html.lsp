@@ -181,7 +181,7 @@ end
 				<div class="theme-block-toggle">
 					<span id="theme-conv" class="temp-convert"><i class="fa-regular fa-moon"></i></span>
 						<label class="switch">
-							<input onclick="darkMode()" id="theme-toggle" type="checkbox">
+							<input onclick="toggleTheme()" id="theme-toggle" type="checkbox">
 							<span class="slider round"></span>
 						</label>
 					<span id="theme-conv" class="temp-convert"><i class="fa-solid fa-sun"></i></span>
