@@ -22,11 +22,13 @@ body {
  */
  
 .page {
+	height: 100vh;
     background: #fefefe;
-    padding: 3rem 1rem 0 1rem;
+    padding: 3rem 0;
 }
 
 #main {
+	height: 100vh;
     width: 98%;
     margin: 0 auto;
 }
