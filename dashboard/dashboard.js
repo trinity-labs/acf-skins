@@ -55,6 +55,7 @@
 			var themeUpdated = window.localStorage.getItem('html', themeUpdated);	
 			if (window.localStorage.getItem('html') === 'light-theme') {
 				$("#html").toggleClass("light-theme");
+				$("#theme-toggle").prop( "checked", false );
 			} else {
 				$("#html").toggleClass("dark-theme");
 				$("#theme-toggle").prop( "checked", true );
@@ -62,6 +63,7 @@
 			if (themeUpdated === '') {
 				window.localStorage.setItem('html', 'light-theme');
 				$("#html").toggleClass("light-theme");
+				$("#theme-toggle").prop( "checked", false );
 			} else {
 				window.localStorage.getItem('html', themeUpdated);
 				$("html").toggleClass(themeUpdated);
@@ -82,6 +84,7 @@
 			};
 			if (degreeUpdated === '') {
 				window.localStorage.setItem('toggle-degree', 'celsius');
+				$("#toggle-degree").prop( "checked", false );
 			} else {
 				window.localStorage.getItem('toggle-degree', degreeUpdated);
 			}
