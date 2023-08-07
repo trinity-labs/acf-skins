@@ -39,6 +39,7 @@ local function diskfree ( media )
 	return cmd_result
 end
 
+
 local function memusage ( )
 	local mult = { kB=1024, MB=1048576, GB=1073741824 }
 	local fd = io.open("/proc/meminfo")
@@ -55,7 +56,6 @@ local function memusage ( )
 		end
 	end
 	fd:close()
-
 	return res
 end
 
@@ -70,20 +70,20 @@ mymodule.get_system = function (self)
 	local indexver = indexversion()
 	system.uptime = cfe({ value=querycmd("cat /proc/uptime"), label="Uptime" })
 	system.date = cfe({ value=querycmd("date"), label="Date" })
-	system.alpinever = cfe({ value=querycmd("wget -qO- https://www.alpinelinux.org/releases.json ; echo"), label="Check Alpine Version" })
-	system.alpineposts = cfe({ value=querycmd("wget -qO- https://www.alpinelinux.org/posts/ ; echo"), label="Check Version Changes" })
-	system.version = cfe({ value=indexver or fs.read_file("/etc/alpine-release") or "Unknown", label="Version" })
+	system.alpinever = cfe({ value=querycmd("wget -qO- https://www.alpinelinux.org/releases.json ; echo") or "Unknown", label="Check Alpine Version" })
+	system.alpineposts = cfe({ value=querycmd("wget -qO- https://www.alpinelinux.org/posts/ ; echo") or "Unknown", label="Check Version Changes" })
+	system.version = cfe({ value=querycmd("cat /etc/alpine-release") or "Unknown", label="Version" })
 	system.alpineluaver = cfe({ value=string.match(querycmd("cat /usr/share/acf/www/cgi-bin/acf"), "lua%d.%d") or "Unknown", label="Alpine Lua Version" })
 	system.luaver = cfe({ value=string.match(querycmd((system.alpineluaver.value) .. " -v"), "Lua%s%d.%d.%d") or "Unknown", label="Lua Version" })
-	system.ACFlightServer = cfe({ value=string.match(querycmd("lighttpd -v"), ".+%d+.%d+%p%d+") or "", label="ACF Lighttpd Server" })
-	system.ACFminiServer = cfe({ value=string.match(querycmd("mini_httpd -V"), ".+%d+%p%d+") or "", label="ACF Mini_Httpd Server" })
+	system.ACFlightServer = cfe({ value=string.match(querycmd("lighttpd -v"), ".+%d+.%d+%p%d+") or "Unknown", label="ACF Lighttpd Server" })
+	system.ACFminiServer = cfe({ value=string.match(querycmd("mini_httpd -V"), ".+%d+%p%d+") or "Unknown", label="ACF Mini_Httpd Server" })
 	system.timezone = cfe({ value=date.what_tz(), label="Time Zone" })
 	system.uname = cfe({ value=querycmd("uname -a"), label="UName" })
 	system.kernel = cfe({ value=querycmd("uname -r"), label="Kernel" })
 	system.memory = cfe({ value=querycmd("free"), label="Memory usage" })
 	system.memory.totalData = string.format("%.2f", (meminfo["MemTotal"]))
 	system.memory.freeData = string.format("%.2f", (meminfo["MemFree"]))
-	system.memory.usedData = string.format("%.2f", (meminfo["Buffers"] + meminfo["Cached"]))
+	system.memory.usedData = string.format("%.2f", (meminfo["MemTotal"]) - (meminfo["MemFree"]))
 	system.memory.free = math.floor(100 * meminfo["MemFree"] / meminfo["MemTotal"])
 	system.memory.buffers = math.floor(100 * (meminfo["Buffers"] + meminfo["Cached"]) / meminfo["MemTotal"])
 	system.memory.used = 100 - math.floor(100 * (meminfo["MemFree"] + meminfo["Buffers"] + meminfo["Cached"]) / meminfo["MemTotal"])
@@ -93,6 +93,7 @@ mymodule.get_system = function (self)
 	system.biosVendor = cfe({ value=querycmd("cat /sys/devices/virtual/dmi/id/bios_vendor") or "Unknown", label="Bios Vendor" })
 	system.biosVersion = cfe({ value=querycmd("cat /sys/devices/virtual/dmi/id/bios_version") or "Unknown", label="Bios Version" })
 	system.biosDate = cfe({ value=string.match(querycmd("cat /sys/devices/virtual/dmi/id/bios_date"), "%d%d%d%d") or "Unknown", label="Bios Date" })
+	system.skinsVersion = cfe({ value=string.gsub(string.match(querycmd("wget -qO- https://gitlab.alpinelinux.org/trinity-labs/acf-skins/-/commits/master/dashboard ; echo"), "&middot;(\n%w+)"), "\n", "") or "Unknown", label="Check Dashboard Changes" })
 	return cfe({ type="group", value=system, label="System" })
 end
 
