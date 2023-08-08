@@ -42,7 +42,7 @@
 				$("#content").css({width: '100%'});
 				$("#subnav").css({width: '100%'});
 			};
-			if (menuUpdated === '') {
+			if (menuUpdated === null) {
 				window.localStorage.setItem('nav', 'active');
 				$("#nav").toggleClass("active");
 				$("#toggle").toggleClass("active");
@@ -60,7 +60,7 @@
 				$("#html").toggleClass("dark-theme");
 				$("#theme-toggle").prop( "checked", true );
 			};
-			if (themeUpdated === '') {
+			if (themeUpdated === null) {
 				window.localStorage.setItem('html', 'light-theme');
 				$("#html").toggleClass("light-theme");
 				$("#theme-toggle").prop( "checked", false );
@@ -82,7 +82,7 @@
 				$("#temp-cap-medium").html("122°<sup>F</sup>");
 				$("#temp-cap-hot").html("167°<sup>F</sup>");
 			};
-			if (degreeUpdated === '') {
+			if (degreeUpdated === null) {
 				window.localStorage.setItem('toggle-degree', 'celsius');
 				$("#toggle-degree").prop( "checked", false );
 			} else {
