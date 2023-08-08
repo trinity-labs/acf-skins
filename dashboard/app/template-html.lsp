@@ -122,8 +122,7 @@ end
 					if session.userinfo and session.userinfo.userid then
 						print("<span id='text-user-logon' class='text-user-"..(session.userinfo.userid).."' title='User @ HOST'>"..(session.userinfo.userid).." @ "..string.upper(hostname or "unknown").."</span>")
 						print ("<!-- ADMIN can change User CSS icon - Username is print in CCS class \"user-icon user-{@username]\" -->")
-						print("<span id='user-logon' class='user-icon user-"..(session.userinfo.userid).."' title='User CSS icon'></span>")
-					end
+						print("<span id='user-logon' class='user-icon user-"..(session.userinfo.userid).."' title='"..(session.userinfo.userid).." CSS icon'></span>")					end
 				%>
 				</div>
 </header>	<!-- header -->
