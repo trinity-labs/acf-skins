@@ -151,9 +151,14 @@
 
 #content select {
     border-radius: 2.5px;
-    width: 100%;
-    height: 2.25rem;
+    width: 106% !important;
+    height: auto;
+	margin: 1rem auto;
     border-color: #cacaca;
+}
+
+.roles select {
+    height: 50rem !important;
 }
 
 #content textarea {
