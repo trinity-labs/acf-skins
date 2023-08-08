@@ -148,15 +148,15 @@ end
 			<h4 class="dashboard-block-title dashboard-title-system">System</h4>
 				<p class="dashboard-infos dash-info-version">
 					<span class="data-title">OS : </span>
-					<%= chkres %> <span class="data-title">| </span>
+					<%= chkres %> | 
 					<span class="check-version">
-					 <a class="version-link version-external-link" href="https://www.alpinelinux.org/posts/<%= check_verchanges %>#content" title="🔗 https://www.alpinelinux.org/posts/<%= check_verchanges %>" target="_blank">Last Release : <%= actual_distver %></a><br>
-					 </span>
-					<span class="data-title">ACF Version : </span><%= sys.value.luaver.value %> 
+						<a class="version-link version-external-link" href="https://www.alpinelinux.org/posts/<%= check_verchanges %>#content" title="🔗 https://www.alpinelinux.org/posts/<%= check_verchanges %>" target="_blank">Last Release : <%= actual_distver %></a><br>
+					</span>
+						<span class="data-title">ACF Version : </span><%= sys.value.luaver.value %> &nbsp;&nbsp;
 					<% if sys.value.ACFlightServer.value ~= "" then %>
-					<span class="data-title"> | Served by : </span><%= sys.value.ACFlightServer.value %>
+						<span class="data-title"> | &nbsp;&nbsp;Served by : </span><%= sys.value.ACFlightServer.value %>
 					<% else %>
-					<span class="data-title"> | Served by : </span><%= sys.value.ACFminiServer.value %>
+						<span class="data-title"> | &nbsp;&nbsp;Served by : </span><%= sys.value.ACFminiServer.value %>
 					<% end %>
 
 				</p>
@@ -275,13 +275,13 @@ end
 			<div class="data-title temp-desc">
 				<p class="title-temp-legend">CPU Temp : </p>
 					<p class="legend temp-legend temp-normal">
-					Temp < <span id="temp-cap-normal">50°C</span>
+					Temp <span class="legend-text"><</span> <span id="temp-cap-normal">50°C</span>
 				</p>
 				<p class="legend temp-legend temp-medium">
-					Temp > or = <span id="temp-cap-medium">50°C</span>
+					Temp <span class="legend-text">> or = </span><span id="temp-cap-medium">50°C</span>
 				</p>
 				<p class="legend temp-legend temp-hot">
-					Temp > or = <span id="temp-cap-hot">75°C</span>
+					Temp <span class="legend-text">> or = </span><span id="temp-cap-hot">75°C</span>
 				</p>
 			</div>
 			<div id="cpuTemp" class="dashboard-infos dash-info-temp">
@@ -457,12 +457,8 @@ $(function memChart() {
 			<div id="chartNetwork"> </div>
 			<canvas id="networkChart" class="data-chart block-chart"></canvas>
 		</div>
-<!-- <div id="demo"></div>-->
-
-<!-- Dashboard Main Block - NETWORK CHART.JS -->
-<script type="application/javascript" src="https://cdn.jsdelivr.net/npm/luxon@latest"></script>
-<script type="application/javascript" src="https://cdn.jsdelivr.net/npm/chartjs-adapter-luxon@latest/dist/chartjs-adapter-luxon.umd.min.js"></script>
-<script type="application/javascript" src="https://cdn.jsdelivr.net/npm/chartjs-plugin-streaming@latest"></script>		
+<div id="demo"></div>
+<!-- Dashboard Main Block - NETWORK CHART.JS -->		
 <script type="application/javascript" defer>
 	var lastdata = <%= json.encode(netstats) %>;
 	var chartdata = <% -- Generate the data structure in Lua and then convert to json
@@ -477,14 +473,16 @@ $(function memChart() {
    $.ajaxSetup({cache:false});
    $.getJSON(
      '<%= html.html_escape(page_info.script .. "/alpine-baselayout/health/networkstats") %>', {viewtype:'json'}, 
+	 console.log(key),
 	function(data) {
 				lastdata = data;
-				document.getElementById("demo").innerHTML = JSON.stringify(lastdata);
 			});
 };
-//	setInterval(displayStats, 1000);
-	
-	
+				document.getElementById("demo").innerHTML = JSON.stringify(lastdata.value);
+				
+				for (const property in lastdata.value) {
+				console.log(`${property}: ${lastdata.value[property]}`);
+				};
 
 $(function networkChart() {
 // Setup Block
@@ -495,14 +493,16 @@ $(function networkChart() {
         data: [],
         tension: 0.25,
 		fill: true,
-		pointRadius: 0
+		pointRadius: 0,
+		backgroundColor: rgb(0,192,128)
       },
 	  {
         label: 'TX eth0',
         data: [],
         tension: 0.25,
 		fill: true,
-		pointRadius: 0
+		pointRadius: 0,
+		backgroundColor:
       }],
     };
 // Config Block
@@ -524,7 +524,7 @@ $(function networkChart() {
 						chart.data.datasets.forEach(dataset => {
 							dataset.data.push({
 							x: Date.now(),
-							// y: setInterval(JSON.stringify(lastdata), 1000)
+							y: setInterval(JSON.stringify(lastdata.value.eth0.RX.bytes), 1000)
 							})
 						})
 					}
