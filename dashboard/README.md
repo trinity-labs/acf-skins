@@ -35,7 +35,7 @@ Visit <a href="https://dashboard.openet.online">**https://dashboard.openet.onlin
 Build from Docker every single day !
 
 <ins>**Sessions & Privileges**</ins>
-- Session Time 5 minutes
+- Session Time `5 minutes`
 - User `aplinist` on custom role `production`
 
 <ins>**Login**</ins>
