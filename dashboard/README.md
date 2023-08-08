@@ -42,7 +42,7 @@ Build from Docker every single day !
 - User ID = `aplinist`
 - Passwd = `Cl1mb!ng`
 
-Hosted on a single laptop board used for testing many stuff that needs 24/7 uptime.<br>
+Hosted on a single laptop  board (**Prototype 2020 |** <a href="https://github.com/trinity-labs">**here**</a>) used for testing many stuff that needs 24/7 uptime.<br>
 **Other operations are not permitted** and getting **saving logs, automated banned IP and ISP e-mail notice.** <br>
 If you facing issues or not justified ban please contact us here or on our social net.
 
@@ -175,4 +175,3 @@ skin=/skins/dashboard
 - **Dashboard Dark Theme**
 
 <img src="https://github.com/trinity-labs/trinity-labs/assets/45216746/f457c54e-1ffc-4922-9f21-eaea0e7822b4">
-
