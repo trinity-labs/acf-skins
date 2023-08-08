@@ -16,6 +16,37 @@
 **From a Skin to an App for Linux `Alpine Configuration Framework` commonly called [ACF](https://wiki.alpinelinux.org/wiki/Alpine_Configuration_Framework_Design)**
 <br>
 <br>
+Visit <a href="https://dashboard.openet.online">**https://dashboard.openet.online**</a> for live demo
+- User ID = `aplinist`
+- Passwd = `Cl1mb!ng`
+
+<ins>As you can read after</ins>: 
+- This a latest stable version in `lua5.2` according last Alpine ACF version.
+- Running on `lighttpd` according <a href="https://gitlab.alpinelinux.org/alpine/alpine-conf/-/merge_requests/159">merge request</a>
+- Some minor bugs due to a constant dev and need to backward compatibility betwenn Alpine Linux hardware system.
+<hr>
+
+> <a href="https://dashboard.openet.online">**ACF Live Demo**</a>
+
+<hr>
+
+![alpine_docker_parser](https://github.com/trinity-labs/acf-skins/assets/45216746/20ae9b87-71d3-43ff-8b80-9f7a70e2ac89)
+
+Build from Docker every single day !
+
+<ins>**Sessions & Privileges**</ins>
+- Session Time 5 minutes
+- User `aplinist` on custom role `production`
+
+<ins>**Login**</ins>
+- User ID = `aplinist`
+- Passwd = `Cl1mb!ng`
+
+Hosted on a single laptop board used for testing many stuff that needs 24/7 uptime.<br>
+**Other operations are not permitted** and getting **saving logs, automated banned IP and ISP e-mail notice.** <br>
+If you facing issues or not justified ban please contact us here or on our social net.
+
+<hr>
 
 ✅ Lighttpd Ready - Remove Mini_httpd 
 
