@@ -10,7 +10,6 @@
 	background-position: center !important;
     display: flex;
     flex-direction: column;
-    overflow: hidden;
     flex-wrap: nowrap;
     justify-content: center;
     align-items: center;
