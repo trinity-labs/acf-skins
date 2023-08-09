@@ -17,6 +17,8 @@
     margin: 0.5rem;
     background: white;
     width: -webkit-fill-available;
+	width: -moz-available;
+    width: fill-available;
     height: auto;
     border-radius: 4px;
     color: grey !important;
@@ -195,6 +197,8 @@
     align-items: stretch;
     justify-content: center;
     width: -webkit-fill-available;
+	width: -moz-available;
+    width: fill-available;
 }
 
 .dashboard-system {
