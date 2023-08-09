@@ -21,9 +21,9 @@ Visit <a href="https://dashboard.openet.online">**https://dashboard.openet.onlin
 - Passwd = `Cl1mb!ng`
 
 <ins>As you can read after</ins>: 
-- This a latest stable version in `lua5.2` according last Alpine ACF version.
+- Run on latest stable version in `lua5.2` according last Alpine ACF version.
 - Running on `lighttpd` according <a href="https://gitlab.alpinelinux.org/alpine/alpine-conf/-/merge_requests/159">merge request</a>
-- Some minor bugs due to a constant dev and need to backward compatibility betwenn Alpine Linux hardware system.
+- Some minor bugs due to a constant dev and need to backward compatibility betwenn Alpine Linux hardware systems.
 <hr>
 
 > <a href="https://dashboard.openet.online">**ACF Live Demo**</a>
@@ -44,7 +44,7 @@ Build from Docker every single day !
 
 Hosted on a single laptop  board (**Prototype 2020 |** <a href="https://github.com/trinity-labs">**here**</a>) used for testing many stuff that needs 24/7 uptime.<br>
 **Other operations are not permitted** and getting **saving logs, automated banned IP and ISP e-mail notice.** <br>
-If you facing issues or not justified ban please contact us here or on our social net.
+If you are facing issues or not justified ban please contact us here (issues) or on our social net.
 
 <hr>
 
