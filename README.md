@@ -12,7 +12,7 @@ See [here](https://gitlab.alpinelinux.org/trinity-labs/acf-skins/-/blob/master/d
 
 Request ACF Official logo changing if possible to modernize ACF<br> 
 
-- <ins>**ACF Alpine Request Cool Logo:**</ins><br>
+- <ins>**ACF Alpine New Cool Logo Request:**</ins><br>
 <div align="center"> 
  <img src="https://github.com/trinity-labs/dashboard-skin/assets/45216746/ec7868c6-33b9-4a5e-a6cd-5583c959c6f4" width="30%">
 </div>
